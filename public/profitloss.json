@@ -1,0 +1,887 @@
+[
+    {
+        "month": "January-2025",
+        "date": "2024-11-01",
+        "no_of_trades": "10",
+        "realizedpl": "4798.78",
+        "charges": "119.80",
+        "net_realizedpl": "4678.90"
+    },
+    {
+        "month": "December-2024",
+        "date": "2024-11-02",
+        "no_of_trades": "11",
+        "realizedpl": "4798.78",
+        "charges": "119.80",
+        "net_realizedpl": "4678.90"
+    },
+    {
+        "month": "November-2024",
+        "date": "2024-11-03",
+        "no_of_trades": "12",
+        "realizedpl": "5200.50",
+        "charges": "130.50",
+        "net_realizedpl": "5070.00"
+    },
+    {
+        "month": "October-2024",
+        "date": "2024-11-04",
+        "no_of_trades": "15",
+        "realizedpl": "6500.00",
+        "charges": "150.00",
+        "net_realizedpl": "6350.00"
+    },
+    {
+        "month": "September-2024",
+        "date": "2024-11-05",
+        "no_of_trades": "8",
+        "realizedpl": "3200.30",
+        "charges": "90.30",
+        "net_realizedpl": "3110.00"
+    },
+    {
+        "month": "August-2024",
+        "date": "2024-11-06",
+        "no_of_trades": "14",
+        "realizedpl": "5700.10",
+        "charges": "140.10",
+        "net_realizedpl": "5560.00"
+    },
+    {
+        "month": "July-2024",
+        "date": "2024-11-07",
+        "no_of_trades": "9",
+        "realizedpl": "3900.60",
+        "charges": "100.60",
+        "net_realizedpl": "3800.00"
+    },
+    {
+        "month": "June-2024",
+        "date": "2024-11-08",
+        "no_of_trades": "10",
+        "realizedpl": "4400.25",
+        "charges": "110.25",
+        "net_realizedpl": "4290.00"
+    },
+    {
+        "month": "May-2024",
+        "date": "2024-11-09",
+        "no_of_trades": "16",
+        "realizedpl": "7100.75",
+        "charges": "160.75",
+        "net_realizedpl": "6940.00"
+    },
+    {
+        "month": "April-2024",
+        "date": "2024-11-10",
+        "no_of_trades": "13",
+        "realizedpl": "5900.40",
+        "charges": "145.40",
+        "net_realizedpl": "5755.00"
+    },
+    {
+        "month": "March-2024",
+        "date": "2024-11-11",
+        "no_of_trades": "18",
+        "realizedpl": "8200.80",
+        "charges": "180.80",
+        "net_realizedpl": "8020.00"
+    },
+    {
+        "month": "February-2024",
+        "date": "2024-11-12",
+        "no_of_trades": "7",
+        "realizedpl": "2900.50",
+        "charges": "80.50",
+        "net_realizedpl": "2820.00"
+    },
+    {
+        "month": "January-2024",
+        "date": "2024-11-13",
+        "no_of_trades": "20",
+        "realizedpl": "9000.10",
+        "charges": "200.10",
+        "net_realizedpl": "8800.00"
+    },
+    {
+        "month": "December-2023",
+        "date": "2024-11-14",
+        "no_of_trades": "5",
+        "realizedpl": "2300.40",
+        "charges": "70.40",
+        "net_realizedpl": "2230.00"
+    },
+    {
+        "month": "November-2023",
+        "date": "2024-11-15",
+        "no_of_trades": "12",
+        "realizedpl": "5600.00",
+        "charges": "140.00",
+        "net_realizedpl": "5460.00"
+    },
+    {
+        "month": "October-2023",
+        "date": "2024-11-16",
+        "no_of_trades": "22",
+        "realizedpl": "1,200.90",
+        "charges": "250.90",
+        "net_realizedpl": "9950.00"
+    },
+    {
+        "month": "September-2023",
+        "date": "2024-11-17",
+        "no_of_trades": "6",
+        "realizedpl": "2600.30",
+        "charges": "85.30",
+        "net_realizedpl": "2515.00"
+    },
+    {
+        "month": "August-2023",
+        "date": "2024-11-18",
+        "no_of_trades": "19",
+        "realizedpl": "8500.00",
+        "charges": "190.00",
+        "net_realizedpl": "8310.00"
+    },
+    {
+        "month": "July-2023",
+        "date": "2024-11-19",
+        "no_of_trades": "11",
+        "realizedpl": "4300.70",
+        "charges": "110.70",
+        "net_realizedpl": "4190.00"
+    },
+    {
+        "month": "June-2023",
+        "date": "2024-11-20",
+        "no_of_trades": "17",
+        "realizedpl": "7800.60",
+        "charges": "170.60",
+        "net_realizedpl": "7630.00"
+    },
+    {
+        "month": "May-2023",
+        "date": "2024-11-21",
+        "no_of_trades": "10",
+        "realizedpl": "4700.50",
+        "charges": "120.50",
+        "net_realizedpl": "4580.00"
+    },
+    {
+        "month": "April-2023",
+        "date": "2024-11-22",
+        "no_of_trades": "13",
+        "realizedpl": "6200.80",
+        "charges": "150.80",
+        "net_realizedpl": "6050.00"
+    },
+    {
+        "month": "March-2023",
+        "date": "2024-11-23",
+        "no_of_trades": "9",
+        "realizedpl": "3900.90",
+        "charges": "100.90",
+        "net_realizedpl": "3800.00"
+    },
+    
+        {
+            "month": "February-2023",
+            "date": "2024-11-24",
+            "no_of_trades": "14",
+            "realizedpl": "6500.20",
+            "charges": "160.20",
+            "net_realizedpl": "6340.00"
+        },
+        {
+            "month": "January-2023",
+            "date": "2024-11-25",
+            "no_of_trades": "18",
+            "realizedpl": "8700.30",
+            "charges": "190.30",
+            "net_realizedpl": "8510.00"
+        },
+        {
+            "month": "December-2022",
+            "date": "2024-11-26",
+            "no_of_trades": "7",
+            "realizedpl": "3100.40",
+            "charges": "90.40",
+            "net_realizedpl": "3010.00"
+        },
+        {
+            "month": "November-2022",
+            "date": "2024-11-27",
+            "no_of_trades": "16",
+            "realizedpl": "7400.50",
+            "charges": "170.50",
+            "net_realizedpl": "7230.00"
+        },
+        {
+            "month": "October-2022",
+            "date": "2024-11-28",
+            "no_of_trades": "20",
+            "realizedpl": "9800.60",
+            "charges": "220.60",
+            "net_realizedpl": "9580.00"
+        },
+        {
+            "month": "September-2022",
+            "date": "2024-11-29",
+            "no_of_trades": "5",
+            "realizedpl": "2400.70",
+            "charges": "80.70",
+            "net_realizedpl": "2320.00"
+        },
+        {
+            "month": "August-2022",
+            "date": "2024-11-30",
+            "no_of_trades": "22",
+            "realizedpl": "1,600.80",
+            "charges": "250.80",
+            "net_realizedpl": "1,350.00"
+        },
+        {
+            "month": "July-2022",
+            "date": "2024-12-01",
+            "no_of_trades": "8",
+            "realizedpl": "3500.90",
+            "charges": "100.90",
+            "net_realizedpl": "3400.00"
+        },
+        {
+            "month": "June-2022",
+            "date": "2024-12-02",
+            "no_of_trades": "19",
+            "realizedpl": "9100.00",
+            "charges": "210.00",
+            "net_realizedpl": "8890.00"
+        },
+        {
+            "month": "May-2022",
+            "date": "2024-12-03",
+            "no_of_trades": "10",
+            "realizedpl": "4800.10",
+            "charges": "120.10",
+            "net_realizedpl": "4680.00"
+        },
+        {
+            "month": "April-2022",
+            "date": "2024-12-04",
+            "no_of_trades": "12",
+            "realizedpl": "5600.20",
+            "charges": "130.20",
+            "net_realizedpl": "5470.00"
+        },
+        {
+            "month": "March-2022",
+            "date": "2024-12-05",
+            "no_of_trades": "17",
+            "realizedpl": "8000.30",
+            "charges": "180.30",
+            "net_realizedpl": "7820.00"
+        },
+        {
+            "month": "February-2022",
+            "date": "2024-12-06",
+            "no_of_trades": "9",
+            "realizedpl": "3800.40",
+            "charges": "110.40",
+            "net_realizedpl": "3690.00"
+        },
+        {
+            "month": "January-2022",
+            "date": "2024-12-07",
+            "no_of_trades": "15",
+            "realizedpl": "7200.50",
+            "charges": "160.50",
+            "net_realizedpl": "7040.00"
+        },
+        {
+            "month": "December-2021",
+            "date": "2024-12-08",
+            "no_of_trades": "6",
+            "realizedpl": "2700.60",
+            "charges": "85.60",
+            "net_realizedpl": "2615.00"
+        },
+        {
+            "month": "November-2021",
+            "date": "2024-12-09",
+            "no_of_trades": "20",
+            "realizedpl": "9500.70",
+            "charges": "230.70",
+            "net_realizedpl": "9270.00"
+        },
+        {
+            "month": "October-2021",
+            "date": "2024-12-10",
+            "no_of_trades": "11",
+            "realizedpl": "4500.80",
+            "charges": "120.80",
+            "net_realizedpl": "4380.00"
+        },
+        {
+            "month": "September-2021",
+            "date": "2024-12-11",
+            "no_of_trades": "13",
+            "realizedpl": "6000.90",
+            "charges": "140.90",
+            "net_realizedpl": "5860.00"
+        },
+        {
+            "month": "August-2021",
+            "date": "2024-12-12",
+            "no_of_trades": "18",
+            "realizedpl": "8500.00",
+            "charges": "200.00",
+            "net_realizedpl": "8300.00"
+        },
+        {
+            "month": "July-2021",
+            "date": "2024-12-13",
+            "no_of_trades": "7",
+            "realizedpl": "3200.10",
+            "charges": "90.10",
+            "net_realizedpl": "3110.00"
+        },
+    
+        
+            {
+                "month": "June-2021",
+                "date": "2024-12-14",
+                "no_of_trades": "16",
+                "realizedpl": "7600.20",
+                "charges": "180.20",
+                "net_realizedpl": "7420.00"
+            },
+            {
+                "month": "May-2021",
+                "date": "2024-12-15",
+                "no_of_trades": "9",
+                "realizedpl": "3500.30",
+                "charges": "100.30",
+                "net_realizedpl": "3400.00"
+            },
+            {
+                "month": "April-2021",
+                "date": "2024-12-16",
+                "no_of_trades": "20",
+                "realizedpl": "9900.40",
+                "charges": "240.40",
+                "net_realizedpl": "9660.00"
+            },
+            {
+                "month": "March-2021",
+                "date": "2024-12-17",
+                "no_of_trades": "8",
+                "realizedpl": "3300.50",
+                "charges": "95.50",
+                "net_realizedpl": "3205.00"
+            },
+            {
+                "month": "February-2021",
+                "date": "2024-12-18",
+                "no_of_trades": "17",
+                "realizedpl": "8100.60",
+                "charges": "190.60",
+                "net_realizedpl": "7910.00"
+            },
+            {
+                "month": "January-2021",
+                "date": "2024-12-19",
+                "no_of_trades": "11",
+                "realizedpl": "4600.70",
+                "charges": "125.70",
+                "net_realizedpl": "4475.00"
+            },
+            {
+                "month": "December-2020",
+                "date": "2024-12-20",
+                "no_of_trades": "13",
+                "realizedpl": "5900.80",
+                "charges": "140.80",
+                "net_realizedpl": "5760.00"
+            },
+            {
+                "month": "November-2020",
+                "date": "2024-12-21",
+                "no_of_trades": "15",
+                "realizedpl": "7200.90",
+                "charges": "170.90",
+                "net_realizedpl": "7030.00"
+            },
+            {
+                "month": "October-2020",
+                "date": "2024-12-22",
+                "no_of_trades": "6",
+                "realizedpl": "2800.00",
+                "charges": "85.00",
+                "net_realizedpl": "2715.00"
+            },
+            {
+                "month": "September-2020",
+                "date": "2024-12-23",
+                "no_of_trades": "22",
+                "realizedpl": "1,500.10",
+                "charges": "260.10",
+                "net_realizedpl": "1,240.00"
+            },
+            {
+                "month": "August-2020",
+                "date": "2024-12-24",
+                "no_of_trades": "10",
+                "realizedpl": "4900.20",
+                "charges": "120.20",
+                "net_realizedpl": "4780.00"
+            },
+            {
+                "month": "July-2020",
+                "date": "2024-12-25",
+                "no_of_trades": "19",
+                "realizedpl": "8900.30",
+                "charges": "210.30",
+                "net_realizedpl": "8690.00"
+            },
+            {
+                "month": "June-2020",
+                "date": "2024-12-26",
+                "no_of_trades": "7",
+                "realizedpl": "3400.40",
+                "charges": "100.40",
+                "net_realizedpl": "3300.00"
+            },
+            {
+                "month": "May-2020",
+                "date": "2024-12-27",
+                "no_of_trades": "14",
+                "realizedpl": "6400.50",
+                "charges": "160.50",
+                "net_realizedpl": "6240.00"
+            },
+            {
+                "month": "April-2020",
+                "date": "2024-12-28",
+                "no_of_trades": "16",
+                "realizedpl": "7500.60",
+                "charges": "180.60",
+                "net_realizedpl": "7320.00"
+            },
+            {
+                "month": "March-2020",
+                "date": "2024-12-29",
+                "no_of_trades": "9",
+                "realizedpl": "3700.70",
+                "charges": "105.70",
+                "net_realizedpl": "3595.00"
+            },
+            {
+                "month": "February-2020",
+                "date": "2024-12-30",
+                "no_of_trades": "18",
+                "realizedpl": "8800.80",
+                "charges": "210.80",
+                "net_realizedpl": "8590.00"
+            },
+            {
+                "month": "January-2020",
+                "date": "2024-12-31",
+                "no_of_trades": "12",
+                "realizedpl": "5500.90",
+                "charges": "135.90",
+                "net_realizedpl": "5365.00"
+            },
+            {
+                "month": "December-2019",
+                "date": "2025-01-01",
+                "no_of_trades": "5",
+                "realizedpl": "2500.00",
+                "charges": "75.00",
+                "net_realizedpl": "2425.00"
+            },
+                {
+                    "month": "November-2019",
+                    "date": "2025-01-02",
+                    "no_of_trades": "14",
+                    "realizedpl": "6700.20",
+                    "charges": "165.20",
+                    "net_realizedpl": "6535.00"
+                },
+                {
+                    "month": "October-2019",
+                    "date": "2025-01-03",
+                    "no_of_trades": "9",
+                    "realizedpl": "3800.30",
+                    "charges": "110.30",
+                    "net_realizedpl": "3690.00"
+                },
+                {
+                    "month": "September-2019",
+                    "date": "2025-01-04",
+                    "no_of_trades": "22",
+                    "realizedpl": "1,900.40",
+                    "charges": "270.40",
+                    "net_realizedpl": "1,630.00"
+                },
+                {
+                    "month": "August-2019",
+                    "date": "2025-01-05",
+                    "no_of_trades": "8",
+                    "realizedpl": "3600.50",
+                    "charges": "105.50",
+                    "net_realizedpl": "3495.00"
+                },
+                {
+                    "month": "July-2019",
+                    "date": "2025-01-06",
+                    "no_of_trades": "19",
+                    "realizedpl": "9200.60",
+                    "charges": "220.60",
+                    "net_realizedpl": "8980.00"
+                },
+                {
+                    "month": "June-2019",
+                    "date": "2025-01-07",
+                    "no_of_trades": "12",
+                    "realizedpl": "5800.70",
+                    "charges": "140.70",
+                    "net_realizedpl": "5660.00"
+                },
+                {
+                    "month": "May-2019",
+                    "date": "2025-01-08",
+                    "no_of_trades": "16",
+                    "realizedpl": "7800.80",
+                    "charges": "190.80",
+                    "net_realizedpl": "7610.00"
+                },
+                {
+                    "month": "April-2019",
+                    "date": "2025-01-09",
+                    "no_of_trades": "18",
+                    "realizedpl": "8600.90",
+                    "charges": "210.90",
+                    "net_realizedpl": "8390.00"
+                },
+                {
+                    "month": "March-2019",
+                    "date": "2025-01-10",
+                    "no_of_trades": "6",
+                    "realizedpl": "2900.00",
+                    "charges": "90.00",
+                    "net_realizedpl": "2810.00"
+                },
+                {
+                    "month": "February-2019",
+                    "date": "2025-01-11",
+                    "no_of_trades": "21",
+                    "realizedpl": "1,200.10",
+                    "charges": "250.10",
+                    "net_realizedpl": "9950.00"
+                },
+                {
+                    "month": "January-2019",
+                    "date": "2025-01-12",
+                    "no_of_trades": "10",
+                    "realizedpl": "5000.20",
+                    "charges": "130.20",
+                    "net_realizedpl": "4870.00"
+                },
+                {
+                    "month": "December-2018",
+                    "date": "2025-01-13",
+                    "no_of_trades": "20",
+                    "realizedpl": "9700.30",
+                    "charges": "230.30",
+                    "net_realizedpl": "9470.00"
+                },
+                {
+                    "month": "November-2018",
+                    "date": "2025-01-14",
+                    "no_of_trades": "7",
+                    "realizedpl": "3500.40",
+                    "charges": "110.40",
+                    "net_realizedpl": "3390.00"
+                },
+                {
+                    "month": "October-2018",
+                    "date": "2025-01-15",
+                    "no_of_trades": "14",
+                    "realizedpl": "6600.50",
+                    "charges": "170.50",
+                    "net_realizedpl": "6430.00"
+                },
+                {
+                    "month": "September-2018",
+                    "date": "2025-01-16",
+                    "no_of_trades": "16",
+                    "realizedpl": "7900.60",
+                    "charges": "200.60",
+                    "net_realizedpl": "7700.00"
+                },
+                {
+                    "month": "August-2018",
+                    "date": "2025-01-17",
+                    "no_of_trades": "9",
+                    "realizedpl": "3900.70",
+                    "charges": "120.70",
+                    "net_realizedpl": "3780.00"
+                },
+                {
+                    "month": "July-2018",
+                    "date": "2025-01-18",
+                    "no_of_trades": "18",
+                    "realizedpl": "8700.80",
+                    "charges": "220.80",
+                    "net_realizedpl": "8480.00"
+                },
+                {
+                    "month": "June-2018",
+                    "date": "2025-01-19",
+                    "no_of_trades": "13",
+                    "realizedpl": "5700.90",
+                    "charges": "150.90",
+                    "net_realizedpl": "5550.00"
+                },
+                {
+                    "month": "May-2018",
+                    "date": "2025-01-20",
+                    "no_of_trades": "5",
+                    "realizedpl": "2600.00",
+                    "charges": "80.00",
+                    "net_realizedpl": "2520.00"
+                },
+                {
+                    "month": "April-2018",
+                    "date": "2025-01-21",
+                    "no_of_trades": "22",
+                    "realizedpl": "1,800.10",
+                    "charges": "280.10",
+                    "net_realizedpl": "1,520.00"
+                },
+                {
+                    "month": "March-2018",
+                    "date": "2025-01-22",
+                    "no_of_trades": "12",
+                    "realizedpl": "5900.20",
+                    "charges": "140.20",
+                    "net_realizedpl": "5760.00"
+                },
+                {
+                    "month": "February-2018",
+                    "date": "2025-01-23",
+                    "no_of_trades": "19",
+                    "realizedpl": "9300.30",
+                    "charges": "230.30",
+                    "net_realizedpl": "9070.00"
+                },
+                {
+                    "month": "January-2018",
+                    "date": "2025-01-24",
+                    "no_of_trades": "8",
+                    "realizedpl": "3700.40",
+                    "charges": "110.40",
+                    "net_realizedpl": "3590.00"
+                },
+                {
+                    "month": "December-2017",
+                    "date": "2025-01-25",
+                    "no_of_trades": "17",
+                    "realizedpl": "8400.50",
+                    "charges": "210.50",
+                    "net_realizedpl": "8190.00"
+                },
+                
+                    {
+                        "month": "November-2017",
+                        "date": "2025-01-26",
+                        "no_of_trades": "14",
+                        "realizedpl": "6500.20",
+                        "charges": "160.20",
+                        "net_realizedpl": "6340.00"
+                    },
+                    {
+                        "month": "October-2017",
+                        "date": "2025-01-27",
+                        "no_of_trades": "9",
+                        "realizedpl": "3600.30",
+                        "charges": "100.30",
+                        "net_realizedpl": "3500.00"
+                    },
+                    {
+                        "month": "September-2017",
+                        "date": "2025-01-28",
+                        "no_of_trades": "22",
+                        "realizedpl": "1,200.40",
+                        "charges": "260.40",
+                        "net_realizedpl": "9940.00"
+                    },
+                    {
+                        "month": "August-2017",
+                        "date": "2025-01-29",
+                        "no_of_trades": "8",
+                        "realizedpl": "3400.50",
+                        "charges": "95.50",
+                        "net_realizedpl": "3305.00"
+                    },
+                    {
+                        "month": "July-2017",
+                        "date": "2025-01-30",
+                        "no_of_trades": "19",
+                        "realizedpl": "9000.60",
+                        "charges": "210.60",
+                        "net_realizedpl": "8790.00"
+                    },
+                    {
+                        "month": "June-2017",
+                        "date": "2025-01-31",
+                        "no_of_trades": "12",
+                        "realizedpl": "5600.70",
+                        "charges": "135.70",
+                        "net_realizedpl": "5465.00"
+                    },
+                    {
+                        "month": "May-2017",
+                        "date": "2025-02-01",
+                        "no_of_trades": "16",
+                        "realizedpl": "7500.80",
+                        "charges": "185.80",
+                        "net_realizedpl": "7315.00"
+                    },
+                    {
+                        "month": "April-2017",
+                        "date": "2025-02-02",
+                        "no_of_trades": "18",
+                        "realizedpl": "8400.90",
+                        "charges": "200.90",
+                        "net_realizedpl": "8200.00"
+                    },
+                    {
+                        "month": "March-2017",
+                        "date": "2025-02-03",
+                        "no_of_trades": "6",
+                        "realizedpl": "2800.00",
+                        "charges": "85.00",
+                        "net_realizedpl": "2715.00"
+                    },
+                    {
+                        "month": "February-2017",
+                        "date": "2025-02-04",
+                        "no_of_trades": "21",
+                        "realizedpl": "1,000.10",
+                        "charges": "245.10",
+                        "net_realizedpl": "9755.00"
+                    },
+                    {
+                        "month": "January-2017",
+                        "date": "2025-02-05",
+                        "no_of_trades": "10",
+                        "realizedpl": "4700.20",
+                        "charges": "120.20",
+                        "net_realizedpl": "4580.00"
+                    },
+                    {
+                        "month": "December-2016",
+                        "date": "2025-02-06",
+                        "no_of_trades": "20",
+                        "realizedpl": "9500.30",
+                        "charges": "225.30",
+                        "net_realizedpl": "9275.00"
+                    },
+                    {
+                        "month": "November-2016",
+                        "date": "2025-02-07",
+                        "no_of_trades": "7",
+                        "realizedpl": "3400.40",
+                        "charges": "95.40",
+                        "net_realizedpl": "3305.00"
+                    },
+                    {
+                        "month": "October-2016",
+                        "date": "2025-02-08",
+                        "no_of_trades": "14",
+                        "realizedpl": "6400.50",
+                        "charges": "160.50",
+                        "net_realizedpl": "6240.00"
+                    },
+                    {
+                        "month": "September-2016",
+                        "date": "2025-02-09",
+                        "no_of_trades": "16",
+                        "realizedpl": "7700.60",
+                        "charges": "190.60",
+                        "net_realizedpl": "7510.00"
+                    },
+                    {
+                        "month": "August-2016",
+                        "date": "2025-02-10",
+                        "no_of_trades": "9",
+                        "realizedpl": "3700.70",
+                        "charges": "110.70",
+                        "net_realizedpl": "3590.00"
+                    },
+                    {
+                        "month": "July-2016",
+                        "date": "2025-02-11",
+                        "no_of_trades": "18",
+                        "realizedpl": "8500.80",
+                        "charges": "205.80",
+                        "net_realizedpl": "8295.00"
+                    },
+                    {
+                        "month": "June-2016",
+                        "date": "2025-02-12",
+                        "no_of_trades": "13",
+                        "realizedpl": "5600.90",
+                        "charges": "140.90",
+                        "net_realizedpl": "5460.00"
+                    },
+                    {
+                        "month": "May-2016",
+                        "date": "2025-02-13",
+                        "no_of_trades": "5",
+                        "realizedpl": "2500.00",
+                        "charges": "75.00",
+                        "net_realizedpl": "2425.00"
+                    },
+                
+                
+                    
+                        {
+                            "month": "April-2016",
+                            "date": "2025-02-14",
+                            "no_of_trades": "22",
+                            "realizedpl": "1,600.10",
+                            "charges": "270.10",
+                            "net_realizedpl": "1,330.00"
+                        },
+                        {
+                            "month": "March-2016",
+                            "date": "2025-02-15",
+                            "no_of_trades": "12",
+                            "realizedpl": "5800.20",
+                            "charges": "135.20",
+                            "net_realizedpl": "5665.00"
+                        },
+                        {
+                            "month": "February-2016",
+                            "date": "2025-02-16",
+                            "no_of_trades": "19",
+                            "realizedpl": "9100.30",
+                            "charges": "225.30",
+                            "net_realizedpl": "8875.00"
+                        },
+                        {
+                            "month": "January-2016",
+                            "date": "2025-02-17",
+                            "no_of_trades": "8",
+                            "realizedpl": "3600.40",
+                            "charges": "105.40",
+                            "net_realizedpl": "3495.00"
+                        }
+                
+                    
+                    
+            
+        
+    
+]

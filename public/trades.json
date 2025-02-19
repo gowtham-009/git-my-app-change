@@ -1,0 +1,1078 @@
+[
+    {
+        "scriptname": "ALPHA CORP LTD",
+        "orderid": "130000634600",
+        "date": "2024-11-01",
+        "action": "BUY",
+        "quantity": "15",
+        "buysellprice": "320.50",
+        "brokerage": "4.00",
+        "charges": "6.10"
+    },
+    {
+        "scriptname": "BETA INDUSTRIES",
+        "orderid": "130000634601",
+        "date": "2024-11-02",
+        "action": "SELL",
+        "quantity": "25",
+        "buysellprice": "150.75",
+        "brokerage": "5.20",
+        "charges": "7.30"
+    },
+    {
+        "scriptname": "DELTA TECH LTD",
+        "orderid": "130000634602",
+        "date": "2024-11-03",
+        "action": "BUY",
+        "quantity": "30",
+        "buysellprice": "450.25",
+        "brokerage": "6.50",
+        "charges": "8.40"
+    },
+    {
+        "scriptname": "OMEGA RETAILS",
+        "orderid": "130000634603",
+        "date": "2024-11-04",
+        "action": "SELL",
+        "quantity": "20",
+        "buysellprice": "220.60",
+        "brokerage": "3.90",
+        "charges": "5.80"
+    },
+    {
+        "scriptname": "ZETA SYSTEMS",
+        "orderid": "130000634604",
+        "date": "2024-11-05",
+        "action": "BUY",
+        "quantity": "10",
+        "buysellprice": "510.30",
+        "brokerage": "7.20",
+        "charges": "9.00"
+    },
+    {
+        "scriptname": "MODERN TEA CO LTD",
+        "orderid": "130000634605",
+        "date": "2024-11-06",
+        "action": "SELL",
+        "quantity": "18",
+        "buysellprice": "215.80",
+        "brokerage": "4.10",
+        "charges": "6.50"
+    },
+    {
+        "scriptname": "NOVA ELECTRONICS",
+        "orderid": "130000634606",
+        "date": "2024-11-07",
+        "action": "BUY",
+        "quantity": "12",
+        "buysellprice": "390.75",
+        "brokerage": "5.60",
+        "charges": "7.80"
+    },
+    {
+        "scriptname": "OMEGA INDUSTRIES",
+        "orderid": "130000634607",
+        "date": "2024-11-08",
+        "action": "SELL",
+        "quantity": "22",
+        "buysellprice": "175.40",
+        "brokerage": "4.80",
+        "charges": "6.90"
+    },
+    {
+        "scriptname": "VECTOR PHARMA",
+        "orderid": "130000634608",
+        "date": "2024-11-09",
+        "action": "BUY",
+        "quantity": "35",
+        "buysellprice": "510.20",
+        "brokerage": "8.10",
+        "charges": "10.50"
+    },
+    {
+        "scriptname": "ZENITH MOTORS",
+        "orderid": "130000634609",
+        "date": "2024-11-10",
+        "action": "SELL",
+        "quantity": "28",
+        "buysellprice": "260.90",
+        "brokerage": "6.30",
+        "charges": "8.70"
+    },
+    {
+        "scriptname": "GAMMA TELECOM",
+        "orderid": "130000634610",
+        "date": "2024-11-11",
+        "action": "BUY",
+        "quantity": "40",
+        "buysellprice": "310.45",
+        "brokerage": "9.20",
+        "charges": "11.30"
+    },
+    {
+        "scriptname": "TITAN STEEL",
+        "orderid": "130000634611",
+        "date": "2024-11-12",
+        "action": "SELL",
+        "quantity": "15",
+        "buysellprice": "280.60",
+        "brokerage": "5.40",
+        "charges": "7.20"
+    },
+    {
+        "scriptname": "SIGMA ENERGIES",
+        "orderid": "130000634612",
+        "date": "2024-11-13",
+        "action": "BUY",
+        "quantity": "50",
+        "buysellprice": "500.90",
+        "brokerage": "10.00",
+        "charges": "12.50"
+    },
+    {
+        "scriptname": "LAMBDA INDUSTRIES",
+        "orderid": "130000634613",
+        "date": "2024-11-14",
+        "action": "SELL",
+        "quantity": "20",
+        "buysellprice": "150.25",
+        "brokerage": "3.80",
+        "charges": "5.40"
+    },
+    {
+        "scriptname": "OMICRON AUTO",
+        "orderid": "130000634614",
+        "date": "2024-11-15",
+        "action": "BUY",
+        "quantity": "60",
+        "buysellprice": "700.50",
+        "brokerage": "15.30",
+        "charges": "18.00"
+    },
+    {
+        "scriptname": "EPSILON SOFTWARE",
+        "orderid": "130000634615",
+        "date": "2024-11-16",
+        "action": "SELL",
+        "quantity": "33",
+        "buysellprice": "430.25",
+        "brokerage": "8.20",
+        "charges": "10.60"
+    },
+    {
+        "scriptname": "THETA TECHNOLOGIES",
+        "orderid": "130000634616",
+        "date": "2024-11-17",
+        "action": "BUY",
+        "quantity": "27",
+        "buysellprice": "390.80",
+        "brokerage": "7.10",
+        "charges": "9.50"
+    },
+    {
+        "scriptname": "SIGMA STEELS",
+        "orderid": "130000634617",
+        "date": "2024-11-18",
+        "action": "SELL",
+        "quantity": "19",
+        "buysellprice": "215.60",
+        "brokerage": "5.40",
+        "charges": "7.00"
+    },
+    {
+        "scriptname": "OMEGA AUTO",
+        "orderid": "130000634618",
+        "date": "2024-11-19",
+        "action": "BUY",
+        "quantity": "45",
+        "buysellprice": "620.75",
+        "brokerage": "11.50",
+        "charges": "13.90"
+    },
+    {
+        "scriptname": "BETA RETAILS",
+        "orderid": "130000634619",
+        "date": "2024-11-20",
+        "action": "SELL",
+        "quantity": "23",
+        "buysellprice": "185.90",
+        "brokerage": "6.00",
+        "charges": "8.20"
+    },
+    {
+        "scriptname": "DELTA SYSTEMS",
+        "orderid": "130000634620",
+        "date": "2024-11-21",
+        "action": "BUY",
+        "quantity": "38",
+        "buysellprice": "495.30",
+        "brokerage": "9.80",
+        "charges": "12.30"
+    },
+    {
+        "scriptname": "ZETA ENERGIES",
+        "orderid": "130000634621",
+        "date": "2024-11-22",
+        "action": "SELL",
+        "quantity": "30",
+        "buysellprice": "290.50",
+        "brokerage": "7.50",
+        "charges": "9.80"
+    },
+    {
+        "scriptname": "TITAN TECH",
+        "orderid": "130000634622",
+        "date": "2024-11-23",
+        "action": "BUY",
+        "quantity": "42",
+        "buysellprice": "550.75",
+        "brokerage": "10.20",
+        "charges": "13.00"
+    },
+    {
+        "scriptname": "VECTOR MOTORS",
+        "orderid": "130000634623",
+        "date": "2024-11-24",
+        "action": "SELL",
+        "quantity": "29",
+        "buysellprice": "260.90",
+        "brokerage": "6.40",
+        "charges": "8.90"
+    },
+    {
+        "scriptname": "OMICRON INFRA",
+        "orderid": "130000634624",
+        "date": "2024-11-25",
+        "action": "BUY",
+        "quantity": "55",
+        "buysellprice": "720.25",
+        "brokerage": "14.50",
+        "charges": "16.80"
+    },
+    {
+        "scriptname": "NOVA INDUSTRIES",
+        "orderid": "130000634625",
+        "date": "2024-11-26",
+        "action": "SELL",
+        "quantity": "32",
+        "buysellprice": "310.40",
+        "brokerage": "7.90",
+        "charges": "10.10"
+    },
+    {
+        "scriptname": "EPSILON TELECOM",
+        "orderid": "130000634626",
+        "date": "2024-11-27",
+        "action": "BUY",
+        "quantity": "60",
+        "buysellprice": "780.60",
+        "brokerage": "16.20",
+        "charges": "18.50"
+    },
+    {
+        "scriptname": "ZENITH METALS",
+        "orderid": "130000634627",
+        "date": "2024-11-28",
+        "action": "SELL",
+        "quantity": "24",
+        "buysellprice": "210.80",
+        "brokerage": "6.50",
+        "charges": "8.40"
+    },
+    {
+        "scriptname": "GAMMA ENERGIES",
+        "orderid": "130000634628",
+        "date": "2024-11-29",
+        "action": "BUY",
+        "quantity": "48",
+        "buysellprice": "615.90",
+        "brokerage": "12.10",
+        "charges": "14.60"
+    },
+    {
+        "scriptname": "SIGMA AUTO",
+        "orderid": "130000634629",
+        "date": "2024-11-30",
+        "action": "SELL",
+        "quantity": "26",
+        "buysellprice": "230.75",
+        "brokerage": "6.80",
+        "charges": "8.90"
+    },
+    {
+        "scriptname": "ALPHA ENERGIES",
+        "orderid": "130000634630",
+        "date": "2024-12-01",
+        "action": "BUY",
+        "quantity": "40",
+        "buysellprice": "525.30",
+        "brokerage": "10.50",
+        "charges": "12.80"
+    },
+    {
+        "scriptname": "BETA MOTORS",
+        "orderid": "130000634631",
+        "date": "2024-12-02",
+        "action": "SELL",
+        "quantity": "28",
+        "buysellprice": "245.60",
+        "brokerage": "7.00",
+        "charges": "9.10"
+    },
+    {
+        "scriptname": "DELTA STEELS",
+        "orderid": "130000634632",
+        "date": "2024-12-03",
+        "action": "BUY",
+        "quantity": "50",
+        "buysellprice": "610.80",
+        "brokerage": "12.40",
+        "charges": "14.90"
+    },
+    {
+        "scriptname": "GAMMA INFRA",
+        "orderid": "130000634633",
+        "date": "2024-12-04",
+        "action": "SELL",
+        "quantity": "22",
+        "buysellprice": "190.75",
+        "brokerage": "5.80",
+        "charges": "7.50"
+    },
+    {
+        "scriptname": "OMEGA TELECOM",
+        "orderid": "130000634634",
+        "date": "2024-12-05",
+        "action": "BUY",
+        "quantity": "45",
+        "buysellprice": "725.90",
+        "brokerage": "13.60",
+        "charges": "16.40"
+    },
+    {
+        "scriptname": "ZETA INDUSTRIES",
+        "orderid": "130000634635",
+        "date": "2024-12-06",
+        "action": "SELL",
+        "quantity": "32",
+        "buysellprice": "270.20",
+        "brokerage": "7.40",
+        "charges": "9.60"
+    },
+    {
+        "scriptname": "EPSILON SOFTWARE",
+        "orderid": "130000634636",
+        "date": "2024-12-07",
+        "action": "BUY",
+        "quantity": "38",
+        "buysellprice": "580.45",
+        "brokerage": "11.20",
+        "charges": "13.80"
+    },
+    {
+        "scriptname": "THETA AUTOMOBILES",
+        "orderid": "130000634637",
+        "date": "2024-12-08",
+        "action": "SELL",
+        "quantity": "26",
+        "buysellprice": "250.90",
+        "brokerage": "6.90",
+        "charges": "8.80"
+    },
+    {
+        "scriptname": "SIGMA TECHNOLOGIES",
+        "orderid": "130000634638",
+        "date": "2024-12-09",
+        "action": "BUY",
+        "quantity": "55",
+        "buysellprice": "690.50",
+        "brokerage": "14.80",
+        "charges": "17.60"
+    },
+    {
+        "scriptname": "VECTOR RETAILS",
+        "orderid": "130000634639",
+        "date": "2024-12-10",
+        "action": "SELL",
+        "quantity": "30",
+        "buysellprice": "290.60",
+        "brokerage": "7.80",
+        "charges": "9.90"
+    },
+    {
+        "scriptname": "OMICRON INDUSTRIES",
+        "orderid": "130000634640",
+        "date": "2024-12-11",
+        "action": "BUY",
+        "quantity": "60",
+        "buysellprice": "750.30",
+        "brokerage": "16.00",
+        "charges": "19.20"
+    },
+    {
+        "scriptname": "NOVA STEELS",
+        "orderid": "130000634641",
+        "date": "2024-12-12",
+        "action": "SELL",
+        "quantity": "34",
+        "buysellprice": "310.75",
+        "brokerage": "8.20",
+        "charges": "10.50"
+    },
+    {
+        "scriptname": "EPSILON ENERGY",
+        "orderid": "130000634642",
+        "date": "2024-12-13",
+        "action": "BUY",
+        "quantity": "48",
+        "buysellprice": "630.20",
+        "brokerage": "12.80",
+        "charges": "15.10"
+    },
+    {
+        "scriptname": "ZENITH PHARMA",
+        "orderid": "130000634643",
+        "date": "2024-12-14",
+        "action": "SELL",
+        "quantity": "29",
+        "buysellprice": "265.90",
+        "brokerage": "7.00",
+        "charges": "9.20"
+    },
+    {
+        "scriptname": "GAMMA TECHNOLOGIES",
+        "orderid": "130000634644",
+        "date": "2024-12-15",
+        "action": "BUY",
+        "quantity": "50",
+        "buysellprice": "670.40",
+        "brokerage": "13.20",
+        "charges": "16.00"
+    },
+    {
+        "scriptname": "SIGMA INFRA",
+        "orderid": "130000634645",
+        "date": "2024-12-16",
+        "action": "SELL",
+        "quantity": "28",
+        "buysellprice": "275.50",
+        "brokerage": "7.30",
+        "charges": "9.50"
+    },
+    {
+        "scriptname": "OMICRON TELECOM",
+        "orderid": "130000634646",
+        "date": "2024-12-17",
+        "action": "BUY",
+        "quantity": "57",
+        "buysellprice": "710.80",
+        "brokerage": "14.00",
+        "charges": "17.50"
+    },
+    {
+        "scriptname": "BETA ENERGIES",
+        "orderid": "130000634647",
+        "date": "2024-12-18",
+        "action": "SELL",
+        "quantity": "31",
+        "buysellprice": "285.75",
+        "brokerage": "7.60",
+        "charges": "9.80"
+    },
+    {
+        "scriptname": "TITAN METALS",
+        "orderid": "130000634648",
+        "date": "2024-12-19",
+        "action": "BUY",
+        "quantity": "53",
+        "buysellprice": "690.60",
+        "brokerage": "13.80",
+        "charges": "16.50"
+    },
+    {
+        "scriptname": "ZETA RETAILS",
+        "orderid": "130000634649",
+        "date": "2024-12-20",
+        "action": "SELL",
+        "quantity": "27",
+        "buysellprice": "255.30",
+        "brokerage": "6.80",
+        "charges": "8.70"
+    },
+    {
+        "scriptname": "ALPHA SYSTEMS",
+        "orderid": "130000634650",
+        "date": "2024-12-21",
+        "action": "BUY",
+        "quantity": "46",
+        "buysellprice": "540.90",
+        "brokerage": "11.00",
+        "charges": "13.50"
+    },
+    {
+        "scriptname": "BETA TECHNOLOGIES",
+        "orderid": "130000634651",
+        "date": "2024-12-22",
+        "action": "SELL",
+        "quantity": "33",
+        "buysellprice": "275.40",
+        "brokerage": "7.40",
+        "charges": "9.70"
+    },
+    {
+        "scriptname": "DELTA AUTOMOTIVES",
+        "orderid": "130000634652",
+        "date": "2024-12-23",
+        "action": "BUY",
+        "quantity": "55",
+        "buysellprice": "615.75",
+        "brokerage": "12.60",
+        "charges": "15.40"
+    },
+    {
+        "scriptname": "OMEGA INDUSTRIES",
+        "orderid": "130000634653",
+        "date": "2024-12-24",
+        "action": "SELL",
+        "quantity": "29",
+        "buysellprice": "245.60",
+        "brokerage": "6.90",
+        "charges": "8.80"
+    },
+    {
+        "scriptname": "ZETA STEELS",
+        "orderid": "130000634654",
+        "date": "2024-12-25",
+        "action": "BUY",
+        "quantity": "62",
+        "buysellprice": "780.20",
+        "brokerage": "16.50",
+        "charges": "19.80"
+    },
+    {
+        "scriptname": "EPSILON METALS",
+        "orderid": "130000634655",
+        "date": "2024-12-26",
+        "action": "SELL",
+        "quantity": "35",
+        "buysellprice": "320.75",
+        "brokerage": "8.50",
+        "charges": "10.90"
+    },
+    {
+        "scriptname": "THETA PHARMA",
+        "orderid": "130000634656",
+        "date": "2024-12-27",
+        "action": "BUY",
+        "quantity": "58",
+        "buysellprice": "705.40",
+        "brokerage": "14.50",
+        "charges": "17.30"
+    },
+    {
+        "scriptname": "SIGMA AUTO",
+        "orderid": "130000634657",
+        "date": "2024-12-28",
+        "action": "SELL",
+        "quantity": "31",
+        "buysellprice": "295.80",
+        "brokerage": "7.60",
+        "charges": "9.90"
+    },
+    {
+        "scriptname": "VECTOR ENERGIES",
+        "orderid": "130000634658",
+        "date": "2024-12-29",
+        "action": "BUY",
+        "quantity": "67",
+        "buysellprice": "825.50",
+        "brokerage": "17.80",
+        "charges": "21.00"
+    },
+    {
+        "scriptname": "OMICRON TECH",
+        "orderid": "130000634659",
+        "date": "2024-12-30",
+        "action": "SELL",
+        "quantity": "28",
+        "buysellprice": "275.30",
+        "brokerage": "7.10",
+        "charges": "9.20"
+    },
+    {
+        "scriptname": "NOVA INDUSTRIES",
+        "orderid": "130000634660",
+        "date": "2024-12-31",
+        "action": "BUY",
+        "quantity": "52",
+        "buysellprice": "640.60",
+        "brokerage": "13.00",
+        "charges": "15.80"
+    },
+    {
+        "scriptname": "EPSILON SYSTEMS",
+        "orderid": "130000634661",
+        "date": "2025-01-01",
+        "action": "SELL",
+        "quantity": "30",
+        "buysellprice": "285.90",
+        "brokerage": "7.50",
+        "charges": "9.60"
+    },
+    {
+        "scriptname": "ZENITH TELECOM",
+        "orderid": "130000634662",
+        "date": "2025-01-02",
+        "action": "BUY",
+        "quantity": "45",
+        "buysellprice": "620.80",
+        "brokerage": "11.80",
+        "charges": "14.50"
+    },
+    {
+        "scriptname": "GAMMA RETAILS",
+        "orderid": "130000634663",
+        "date": "2025-01-03",
+        "action": "SELL",
+        "quantity": "33",
+        "buysellprice": "295.40",
+        "brokerage": "7.80",
+        "charges": "10.00"
+    },
+    {
+        "scriptname": "SIGMA METALS",
+        "orderid": "130000634664",
+        "date": "2025-01-04",
+        "action": "BUY",
+        "quantity": "60",
+        "buysellprice": "730.25",
+        "brokerage": "15.20",
+        "charges": "18.40"
+    },
+    {
+        "scriptname": "BETA TECHNOLOGIES",
+        "orderid": "130000634665",
+        "date": "2025-01-05",
+        "action": "SELL",
+        "quantity": "27",
+        "buysellprice": "265.50",
+        "brokerage": "6.90",
+        "charges": "8.90"
+    },
+    {
+        "scriptname": "ALPHA AUTO",
+        "orderid": "130000634666",
+        "date": "2025-01-06",
+        "action": "BUY",
+        "quantity": "54",
+        "buysellprice": "690.90",
+        "brokerage": "13.80",
+        "charges": "16.60"
+    },
+    {
+        "scriptname": "TITAN SYSTEMS",
+        "orderid": "130000634667",
+        "date": "2025-01-07",
+        "action": "SELL",
+        "quantity": "29",
+        "buysellprice": "275.90",
+        "brokerage": "7.20",
+        "charges": "9.30"
+    },
+    {
+        "scriptname": "ZETA INFRA",
+        "orderid": "130000634668",
+        "date": "2025-01-08",
+        "action": "BUY",
+        "quantity": "65",
+        "buysellprice": "800.40",
+        "brokerage": "16.80",
+        "charges": "20.10"
+    },
+    
+        {
+            "scriptname": "EPSILON ENERGIES",
+            "orderid": "130000634669",
+            "date": "2025-01-09",
+            "action": "BUY",
+            "quantity": "48",
+            "buysellprice": "680.50",
+            "brokerage": "12.60",
+            "charges": "15.30"
+        },
+        {
+            "scriptname": "OMEGA INDUSTRIES",
+            "orderid": "130000634670",
+            "date": "2025-01-10",
+            "action": "SELL",
+            "quantity": "34",
+            "buysellprice": "310.80",
+            "brokerage": "8.40",
+            "charges": "10.70"
+        },
+        {
+            "scriptname": "VECTOR METALS",
+            "orderid": "130000634671",
+            "date": "2025-01-11",
+            "action": "BUY",
+            "quantity": "52",
+            "buysellprice": "720.30",
+            "brokerage": "14.20",
+            "charges": "17.40"
+        },
+        {
+            "scriptname": "DELTA SYSTEMS",
+            "orderid": "130000634672",
+            "date": "2025-01-12",
+            "action": "SELL",
+            "quantity": "30",
+            "buysellprice": "280.75",
+            "brokerage": "7.40",
+            "charges": "9.80"
+        },
+        {
+            "scriptname": "ALPHA TELECOM",
+            "orderid": "130000634673",
+            "date": "2025-01-13",
+            "action": "BUY",
+            "quantity": "58",
+            "buysellprice": "750.60",
+            "brokerage": "15.60",
+            "charges": "18.80"
+        },
+        {
+            "scriptname": "THETA AUTO",
+            "orderid": "130000634674",
+            "date": "2025-01-14",
+            "action": "SELL",
+            "quantity": "26",
+            "buysellprice": "270.40",
+            "brokerage": "7.10",
+            "charges": "9.20"
+        },
+        {
+            "scriptname": "NOVA STEELS",
+            "orderid": "130000634675",
+            "date": "2025-01-15",
+            "action": "BUY",
+            "quantity": "60",
+            "buysellprice": "785.90",
+            "brokerage": "16.20",
+            "charges": "19.50"
+        },
+        {
+            "scriptname": "SIGMA INFRA",
+            "orderid": "130000634676",
+            "date": "2025-01-16",
+            "action": "SELL",
+            "quantity": "32",
+            "buysellprice": "295.50",
+            "brokerage": "7.80",
+            "charges": "10.00"
+        },
+        {
+            "scriptname": "EPSILON TECHNOLOGIES",
+            "orderid": "130000634677",
+            "date": "2025-01-17",
+            "action": "BUY",
+            "quantity": "66",
+            "buysellprice": "830.70",
+            "brokerage": "18.00",
+            "charges": "21.40"
+        },
+        {
+            "scriptname": "BETA RETAILS",
+            "orderid": "130000634678",
+            "date": "2025-01-18",
+            "action": "SELL",
+            "quantity": "28",
+            "buysellprice": "285.60",
+            "brokerage": "7.50",
+            "charges": "9.70"
+        },
+        {
+            "scriptname": "TITAN METALS",
+            "orderid": "130000634679",
+            "date": "2025-01-19",
+            "action": "BUY",
+            "quantity": "64",
+            "buysellprice": "810.20",
+            "brokerage": "17.40",
+            "charges": "20.80"
+        },
+        {
+            "scriptname": "ZETA ENERGIES",
+            "orderid": "130000634680",
+            "date": "2025-01-20",
+            "action": "SELL",
+            "quantity": "30",
+            "buysellprice": "300.75",
+            "brokerage": "7.90",
+            "charges": "10.30"
+        },
+        {
+            "scriptname": "OMEGA TECHNOLOGIES",
+            "orderid": "130000634681",
+            "date": "2025-01-21",
+            "action": "BUY",
+            "quantity": "70",
+            "buysellprice": "870.90",
+            "brokerage": "18.60",
+            "charges": "22.40"
+        },
+        {
+            "scriptname": "ALPHA INFRA",
+            "orderid": "130000634682",
+            "date": "2025-01-22",
+            "action": "SELL",
+            "quantity": "33",
+            "buysellprice": "315.80",
+            "brokerage": "8.50",
+            "charges": "10.80"
+        },
+        {
+            "scriptname": "VECTOR AUTOMOBILES",
+            "orderid": "130000634683",
+            "date": "2025-01-23",
+            "action": "BUY",
+            "quantity": "62",
+            "buysellprice": "790.30",
+            "brokerage": "16.80",
+            "charges": "20.10"
+        },
+        {
+            "scriptname": "DELTA PHARMA",
+            "orderid": "130000634684",
+            "date": "2025-01-24",
+            "action": "SELL",
+            "quantity": "31",
+            "buysellprice": "310.40",
+            "brokerage": "8.20",
+            "charges": "10.50"
+        },
+        {
+            "scriptname": "GAMMA METALS",
+            "orderid": "130000634685",
+            "date": "2025-01-25",
+            "action": "BUY",
+            "quantity": "55",
+            "buysellprice": "730.60",
+            "brokerage": "14.80",
+            "charges": "17.90"
+        },
+        {
+            "scriptname": "THETA INDUSTRIES",
+            "orderid": "130000634686",
+            "date": "2025-01-26",
+            "action": "SELL",
+            "quantity": "29",
+            "buysellprice": "280.90",
+            "brokerage": "7.40",
+            "charges": "9.60"
+        },
+        {
+            "scriptname": "EPSILON RETAILS",
+            "orderid": "130000634687",
+            "date": "2025-01-27",
+            "action": "BUY",
+            "quantity": "60",
+            "buysellprice": "770.50",
+            "brokerage": "16.00",
+            "charges": "19.20"
+        },
+        {
+            "scriptname": "ZENITH ENERGIES",
+            "orderid": "130000634688",
+            "date": "2025-01-28",
+            "action": "SELL",
+            "quantity": "30",
+            "buysellprice": "295.75",
+            "brokerage": "7.90",
+            "charges": "10.00"
+        },
+        
+            {
+                "scriptname": "ALPHA SYSTEMS",
+                "orderid": "130000634689",
+                "date": "2025-01-29",
+                "action": "BUY",
+                "quantity": "50",
+                "buysellprice": "720.40",
+                "brokerage": "14.50",
+                "charges": "17.60"
+            },
+            {
+                "scriptname": "BETA TECHNOLOGIES",
+                "orderid": "130000634690",
+                "date": "2025-01-30",
+                "action": "SELL",
+                "quantity": "32",
+                "buysellprice": "310.75",
+                "brokerage": "8.20",
+                "charges": "10.50"
+            },
+            {
+                "scriptname": "DELTA INFRA",
+                "orderid": "130000634691",
+                "date": "2025-01-31",
+                "action": "BUY",
+                "quantity": "65",
+                "buysellprice": "850.90",
+                "brokerage": "18.00",
+                "charges": "22.00"
+            },
+            {
+                "scriptname": "OMEGA AUTOMOTIVES",
+                "orderid": "130000634692",
+                "date": "2025-02-01",
+                "action": "SELL",
+                "quantity": "30",
+                "buysellprice": "295.40",
+                "brokerage": "7.80",
+                "charges": "10.00"
+            },
+            {
+                "scriptname": "EPSILON METALS",
+                "orderid": "130000634693",
+                "date": "2025-02-02",
+                "action": "BUY",
+                "quantity": "60",
+                "buysellprice": "780.20",
+                "brokerage": "16.50",
+                "charges": "19.80"
+            },
+            {
+                "scriptname": "THETA PHARMA",
+                "orderid": "130000634694",
+                "date": "2025-02-03",
+                "action": "SELL",
+                "quantity": "28",
+                "buysellprice": "270.50",
+                "brokerage": "7.00",
+                "charges": "9.20"
+            },
+            {
+                "scriptname": "SIGMA AUTO",
+                "orderid": "130000634695",
+                "date": "2025-02-04",
+                "action": "BUY",
+                "quantity": "55",
+                "buysellprice": "750.60",
+                "brokerage": "15.60",
+                "charges": "18.80"
+            },
+            {
+                "scriptname": "VECTOR ENERGIES",
+                "orderid": "130000634696",
+                "date": "2025-02-05",
+                "action": "SELL",
+                "quantity": "27",
+                "buysellprice": "260.80",
+                "brokerage": "6.80",
+                "charges": "8.90"
+            },
+            {
+                "scriptname": "OMICRON TECH",
+                "orderid": "130000634697",
+                "date": "2025-02-06",
+                "action": "BUY",
+                "quantity": "70",
+                "buysellprice": "900.75",
+                "brokerage": "19.50",
+                "charges": "23.60"
+            },
+            {
+                "scriptname": "NOVA INDUSTRIES",
+                "orderid": "130000634698",
+                "date": "2025-02-07",
+                "action": "SELL",
+                "quantity": "35",
+                "buysellprice": "315.90",
+                "brokerage": "8.60",
+                "charges": "11.00"
+            },
+            {
+                "scriptname": "EPSILON SYSTEMS",
+                "orderid": "130000634699",
+                "date": "2025-02-08",
+                "action": "BUY",
+                "quantity": "64",
+                "buysellprice": "815.40",
+                "brokerage": "17.20",
+                "charges": "20.50"
+            },
+            {
+                "scriptname": "ZENITH TELECOM",
+                "orderid": "130000634700",
+                "date": "2025-02-09",
+                "action": "SELL",
+                "quantity": "30",
+                "buysellprice": "285.40",
+                "brokerage": "7.50",
+                "charges": "9.70"
+            },
+            {
+                "scriptname": "GAMMA RETAILS",
+                "orderid": "130000634701",
+                "date": "2025-02-10",
+                "action": "BUY",
+                "quantity": "58",
+                "buysellprice": "750.80",
+                "brokerage": "15.80",
+                "charges": "18.90"
+            },
+            {
+                "scriptname": "SIGMA METALS",
+                "orderid": "130000634702",
+                "date": "2025-02-11",
+                "action": "SELL",
+                "quantity": "29",
+                "buysellprice": "270.50",
+                "brokerage": "7.20",
+                "charges": "9.40"
+            },
+            {
+                "scriptname": "BETA TECHNOLOGIES",
+                "orderid": "130000634703",
+                "date": "2025-02-12",
+                "action": "BUY",
+                "quantity": "62",
+                "buysellprice": "805.60",
+                "brokerage": "17.40",
+                "charges": "20.60"
+            },
+            {
+                "scriptname": "ALPHA AUTO",
+                "orderid": "130000634704",
+                "date": "2025-02-13",
+                "action": "SELL",
+                "quantity": "33",
+                "buysellprice": "310.40",
+                "brokerage": "8.20",
+                "charges": "10.40"
+            },
+            {
+                "scriptname": "TITAN SYSTEMS",
+                "orderid": "130000634705",
+                "date": "2025-02-14",
+                "action": "BUY",
+                "quantity": "65",
+                "buysellprice": "860.30",
+                "brokerage": "18.00",
+                "charges": "22.00"
+            },
+            {
+                "scriptname": "ZETA INFRA",
+                "orderid": "130000634706",
+                "date": "2025-02-15",
+                "action": "SELL",
+                "quantity": "30",
+                "buysellprice": "300.50",
+                "brokerage": "7.80",
+                "charges": "10.10"
+            }
+        
+        
+    
+    
+]
