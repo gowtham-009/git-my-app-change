@@ -130,7 +130,7 @@
 
       <main class="py-2">
        
-        <div class="px-4 sm:px-6 lg:px-8">
+        <div class="px-2">
           <div v-if="activeComponent === 'Ledger'">
             <ledger />
           </div>

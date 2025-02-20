@@ -1,9 +1,157 @@
 <template>
     <Toast />
-  <div>
+
+    <div  class="w-full" v-if="loading">
+    <div class="p-1 space-y-4">
+  
+    
+      <div class="w-full p-4 border border-gray-300 rounded-lg">
+  <div class="h-4 w-24 bg-gray-300 rounded animate-pulse"></div>
+  <div class="mt-2 flex items-center gap-2">
+    <div class="h-4 w-40 bg-gray-300 rounded animate-pulse"></div>
+    <div class="h-6 w-6 bg-gray-300 rounded animate-pulse"></div>
+  </div>
+</div>
+ 
+  
+    <!-- Table Skeleton -->
+
+    <div class="border border-gray-200 rounded-lg ">
+
+      <div class="h-20   bg-white animate-pulse rounded-lg flex gap-2 justify-end items-center py-5 p-3">
+      <div class="h-12 w-96 bg-gray-200 animate-pulse rounded"></div>
+      <div class="h-12 w-8 bg-gray-200 animate-pulse rounded"></div>
+      <div class="h-12 w-8 bg-gray-200 animate-pulse rounded"></div>
+    </div>
+
+        <div class="grid grid-cols-7 bg-gray-100 p-3 font-semibold">
+            <div class="h-8 w-20 bg-gray-200 animate-pulse rounded"></div>
+            <div class="h-8 w-20 bg-gray-200 animate-pulse rounded"></div>
+            <div class="h-8 w-20 bg-gray-200 animate-pulse rounded"></div>
+            <div class="h-8 w-20 bg-gray-200 animate-pulse rounded"></div>
+            <div class="h-8 w-20 bg-gray-200 animate-pulse rounded"></div>
+            <div class="h-8 w-20 bg-gray-200 animate-pulse rounded"></div>
+            <div class="h-8 w-20 bg-gray-200 animate-pulse rounded"></div>
+        </div>
+
+        <!-- Table Rows -->
+        <div class="divide-y divide-gray-200">
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            <div class="grid grid-cols-7 p-3 animate-pulse">
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+                <div class="h-6 w-20 bg-gray-200 rounded"></div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Pagination Skeleton -->
+    <div class="flex justify-center space-x-2">
+        <div class="h-8 w-8 bg-gray-200 animate-pulse rounded-full"></div>
+        <div class="h-8 w-8 bg-gray-200 animate-pulse rounded-full"></div>
+        <div class="h-8 w-8 bg-gray-200 animate-pulse rounded-full"></div>
+    </div>
+</div>
+</div>
+
+  <div v-if="content">
     <div class="w-full p-1 flex gap-2 items-end" >
      <div>
-      <div class="text-slate-500">Statement For</div>
+      <div class="text-slate-500">Statement For {{ rangetext }}</div>
       <div class="text-black-500"><span>{{ startdate }}</span> To <span>{{ enddate }}</span></div>
      </div>
       <div>
@@ -11,7 +159,7 @@
           <PopoverButton class="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 border rounded-lg p-1">
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-8 h-8">
+              stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round"
                 d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
             </svg>
@@ -28,16 +176,16 @@
                   <span class="text-lg"><i class="pi pi-clock"></i> Frequently used time period</span>
                   <div class="w-full p-1 flex gap-2 pl-5">
                     <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'days_7' }" @click="getdata('days_7', close)" 
-                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">7
+                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">7
                       Days</button>
                     <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'days_15' }" @click="getdata('days_15', close)"
-                      class="rounded-md   px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">15
+                      class="rounded-md   px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">15
                       Days</button>
                     <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'month_1' }" @click="getdata('month_1', close)"
-                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">1
+                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">1
                       Month</button>
                     <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'months_3' }" @click="getdata('months_3', close)"
-                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">3
+                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">3
                       Months</button>
                   </div>
 
@@ -67,7 +215,7 @@
       </div>
 
     </div>
-    <div class="w-full p-1 mt-2" ></div>
+
     <div class="w-full p-1 mt-2" >
 
       <DataTable v-model:filters="filters" :value="customers" paginator :rows="10" removableSort dataKey="id"
@@ -351,6 +499,9 @@ import { ArrowPathIcon, ChartPieIcon, CursorArrowRaysIcon, FingerPrintIcon, Squa
 import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
 import { useToast } from "primevue/usetoast";
 
+const rangetext=ref('')
+const loading=ref(true)
+const content=ref(false)
 const formatDatee = (dateString) => {
   if (!dateString) return "";
   const [year, month, day] = dateString.split("-");
@@ -367,9 +518,8 @@ const filters = ref();
 const activedata=ref('days_7')
 const getdata = async (data_filter, close) => {
 
- 
-
   if (data_filter === 'daterangefilter') {
+    rangetext.value=''
     close()
   
   const formatDate = (date) => {
@@ -404,6 +554,10 @@ const getdata = async (data_filter, close) => {
   } catch (error) {
     console.error("Error fetching data:", error);
   }
+  finally{
+    loading.value=false
+    content.value=true
+  }
 }
 
  else{
@@ -413,6 +567,7 @@ const getdata = async (data_filter, close) => {
     const data = await res.json()
     if (data_filter == 'days_7') {
       activedata.value='days_7'
+      rangetext.value='7 Days'
       close()
       customers.value = data[0].days_7
      
@@ -429,6 +584,7 @@ const getdata = async (data_filter, close) => {
     }
     else if (data_filter == 'days_15') {
        activedata.value='days_15'
+       rangetext.value='15 Days'
       close()
       customers.value = data[0].days_15
      
@@ -441,6 +597,7 @@ const getdata = async (data_filter, close) => {
     }
     else if (data_filter == 'month_1') {
        activedata.value='month_1'
+       rangetext.value='1 Month'
       close()
       customers.value = data[0].month_1
       enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
@@ -456,6 +613,7 @@ start.value= startdate.value
     }
     else if (data_filter == 'months_3') {
        activedata.value='months_3'
+       rangetext.value='3 Month'
     close()
       customers.value = data[0].months_3
       enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
@@ -472,6 +630,10 @@ start.value= startdate.value
 
   } catch (error) {
     console.error('Error:', error.message);
+  }
+  finally{
+    loading.value=false
+    content.value=true
   }
  }
 };

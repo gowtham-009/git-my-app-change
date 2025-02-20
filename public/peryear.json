@@ -3561,6 +3561,32 @@
             "overallpluss": "-3.50%",
             "days": "20.00",
             "daysplus": "+0.50%"
+        },
+        {
+            "stockname": "LMNOP",
+            "date": "2025-02-19",
+            "quantity": 30,
+            "avgprice": "300.50",
+            "ltp": "117.00",
+            "invamt": "260.50",
+            "mktval": "9000.00",
+            "overall": "2.50",
+            "overallpluss": "-3.50%",
+            "days": "20.00",
+            "daysplus": "+0.50%"
+        },
+        {
+            "stockname": "LMNOP",
+            "date": "2025-02-20",
+            "quantity": 30,
+            "avgprice": "300.50",
+            "ltp": "117.00",
+            "invamt": "260.50",
+            "mktval": "9000.00",
+            "overall": "2.50",
+            "overallpluss": "-3.50%",
+            "days": "20.00",
+            "daysplus": "+0.50%"
         }
     
 ]
