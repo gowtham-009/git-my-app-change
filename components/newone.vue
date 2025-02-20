@@ -519,10 +519,23 @@ const activedata=ref('days_7')
 const getdata = async (data_filter, close) => {
 
   if (data_filter === 'daterangefilter') {
-    rangetext.value=''
-    close()
-  
-  const formatDate = (date) => {
+  console.log(start.value, end.value); // Debugging
+
+  if (!start.value || !end.value) {
+    console.error("Start date or end date is undefined");
+    return; // Stop execution if values are missing
+  }
+
+  rangetext.value = '';
+  close();
+
+  const formatDate = (dateString) => {
+    if (!dateString) return ''; // Handle empty strings safely
+    const date = new Date(dateString);
+    if (isNaN(date)) {
+      console.error(`Invalid date: ${dateString}`);
+      return '';
+    }
     const dd = String(date.getDate()).padStart(2, '0');
     const mm = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
     const yyyy = date.getFullYear();
@@ -531,7 +544,13 @@ const getdata = async (data_filter, close) => {
 
   const startDate = new Date(start.value);
   let endDate = new Date(end.value);
-  endDate.setHours(23, 59, 59, 999); 
+
+  if (isNaN(startDate) || isNaN(endDate)) {
+    console.error("Invalid date format");
+    return;
+  }
+
+  endDate.setHours(23, 59, 59, 999);
 
   try {
     const res = await fetch('/peryear.json');
@@ -540,10 +559,11 @@ const getdata = async (data_filter, close) => {
     const data = await res.json();
 
     if (startDate && endDate) {
-      
-      startdate.value=formatDate(startDate)
-      enddate.value= formatDate(endDate)
-    
+      console.log(startDate, endDate);
+
+      startdate.value = formatDate(start.value);
+      enddate.value = formatDate(end.value);
+
       const filteredData = data.filter(item => {
         const itemDate = new Date(item.date);
         return itemDate >= startDate && itemDate <= endDate;
@@ -553,12 +573,12 @@ const getdata = async (data_filter, close) => {
     }
   } catch (error) {
     console.error("Error fetching data:", error);
-  }
-  finally{
-    loading.value=false
-    content.value=true
+  } finally {
+    loading.value = false;
+    content.value = true;
   }
 }
+
 
  else{
   try {
@@ -589,11 +609,9 @@ const getdata = async (data_filter, close) => {
       customers.value = data[0].days_15
      
       enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
-      startdate.value = new Date(new Date().setDate(new Date().getDate() - 14))
-  .toLocaleDateString('en-GB')
-  .replace(/\//g, '-');
-  start.value= startdate.value
-  end.value= enddate.value
+      startdate.value = new Date(new Date().setDate(new Date().getDate() - 14)).toLocaleDateString('en-GB').replace(/\//g, '-');
+      start.value= startdate.value
+      end.value= enddate.value
     }
     else if (data_filter == 'month_1') {
        activedata.value='month_1'
