@@ -167,6 +167,8 @@ import trades from '~/components/trades.vue'
 import profiltloss from '~/components/profitloss.vue'
 import funds from '~/components/funds.vue'
 import withdraw from '~/components/withdraw.vue'
+import { onMounted} from "vue";
+import { useRoute, useRouter } from "vue-router";
 import {
   Dialog,
   DialogPanel,
@@ -226,12 +228,11 @@ if(item.name=='Your profile'){
 
 
 
-import { onMounted} from "vue";
-import { useRoute, useRouter } from "vue-router";
+
 
 const router = useRouter();
 const route = useRoute();
-const val = ref(route.query.val); 
+const val = ref(route.query.val || 'GWD001'); 
 
 onMounted(() => {
 

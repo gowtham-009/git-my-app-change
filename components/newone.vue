@@ -1,4 +1,5 @@
 <template>
+    <Toast />
   <div>
     <div class="w-full p-1 flex gap-2 items-end" >
      <div>
@@ -17,25 +18,25 @@
 
           </PopoverButton>
 
-          <transition  enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" style="border: 1px solid red;"
+          <transition  enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" 
             enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
             leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-            <PopoverPanel class="absolute left-1/2 z-10 mt-2 flex w-screen max-w-max -translate-x-1/2 px-4">
+            <PopoverPanel v-slot="{ close }" class="absolute left-1/2 z-10 mt-2 flex w-screen max-w-max -translate-x-1/2 px-4">
               <div
                 class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
                 <div class="p-4">
                   <span class="text-lg"><i class="pi pi-clock"></i> Frequently used time period</span>
                   <div class="w-full p-1 flex gap-2 pl-5">
-                    <button type="button" @click="getdata('days_7', 'none')"
+                    <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'days_7' }" @click="getdata('days_7', close)" 
                       class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">7
                       Days</button>
-                    <button type="button" @click="getdata('days_15')"
+                    <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'days_15' }" @click="getdata('days_15', close)"
                       class="rounded-md   px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">15
                       Days</button>
-                    <button type="button" @click="getdata('month_1')"
+                    <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'month_1' }" @click="getdata('month_1', close)"
                       class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">1
                       Month</button>
-                    <button type="button" @click="getdata('months_3')"
+                    <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'months_3' }" @click="getdata('months_3', close)"
                       class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300">3
                       Months</button>
                   </div>
@@ -55,7 +56,7 @@
             </div>
              </div>
             <div class="w-full flex justify-start mt-2">
-              <button @click="getdata('daterangefilter')" class="text-white bg-indigo-600 py-1 px-2 rounded-lg">Apply filter</button>
+              <button @click="getdata('daterangefilter', close)" class="text-white bg-indigo-600 py-1 px-2 rounded-lg">Apply filter</button>
             </div>
                 </div>
 
@@ -119,7 +120,7 @@
         <Column class="cursor-pointer" v-if="visibleColumns.includes('stockname')" sortable field="stockname"
           header="Stockname">
           <template #body="{ data }">
-            {{ data.stockname }}
+           <span @click="rightcanva(data)">{{ data.stockname }}</span>
           </template>
           <template #filter="{ filterModel }">
             <InputText v-model="filterModel.value" type="text" placeholder="Search by name" />
@@ -127,7 +128,7 @@
         </Column>
         <Column class="cursor-pointer" v-if="visibleColumns.includes('quantity')" sortable field="quantity"header="Quantity"  :showFilterOperator="false" :showFilterMatchModes="false">
           <template #body="{ data }">
-            <span> {{ data.quantity }}</span>
+            <span @click="rightcanva(data)"> {{ data.quantity }}</span>
           </template>
           <template #filter="{ filterModel }">
             <Slider v-model="filterModel.value" range class="m-4" :min="1" :max="1000"></Slider>
@@ -140,7 +141,7 @@
 
         <Column class="cursor-pointer"  v-if="visibleColumns.includes('date')"  sortable field="date" header="Date"  :showFilterOperator="false" :showFilterMatchModes="false">
           <template #body="{ data }">
-            <span>{{ formatDatee(data.date) }}</span>
+            <span @click="rightcanva(data)">{{ formatDatee(data.date) }}</span>
            
           </template>
           <template #filter="{ filterModel }">
@@ -150,7 +151,7 @@
         </Column>
         <Column class="cursor-pointer"  v-if="visibleColumns.includes('avgprice')"  sortable field="avgprice" header="Avgprice"  :showFilterOperator="false" :showFilterMatchModes="false">
           <template #body="{ data }">
-            <span>{{ data.avgprice }}</span>
+            <span @click="rightcanva(data)">{{ data.avgprice }}</span>
           </template>
           <template #filter="{ filterModel }">
             <Slider v-model="filterModel.value" range class="m-4" :min="1" :max="1000"></Slider>
@@ -162,7 +163,7 @@
         </Column>
         <Column class="cursor-pointer"  v-if="visibleColumns.includes('ltp')"  sortable field="ltp" header="LTP"  :showFilterOperator="false" :showFilterMatchModes="false">
           <template #body="{ data }">
-            <span> {{ data.ltp }}</span>
+            <span @click="rightcanva(data)"> {{ data.ltp }}</span>
           </template>
           <template #filter="{ filterModel }">
             <Slider v-model="filterModel.value" range class="m-4" :min="1" :max="1000"></Slider>
@@ -174,7 +175,7 @@
         </Column>
         <Column class="cursor-pointer"  v-if="visibleColumns.includes('invamt')" sortable field="invamt" header="INV"  :showFilterOperator="false" :showFilterMatchModes="false">
           <template #body="{ data }">
-            <span>{{ data.invamt }}</span>
+            <span @click="rightcanva(data)">{{ data.invamt }}</span>
           </template>
           <template #filter="{ filterModel }">
             <Slider v-model="filterModel.value" range class="m-4" :min="1" :max="100000"></Slider>
@@ -186,7 +187,7 @@
         </Column>
         <Column class="cursor-pointer"  v-if="visibleColumns.includes('mktval')"  field="mktval" sortable header="Mktval":showFilterOperator="false" :showFilterMatchModes="false">
           <template #body="{ data }">
-            <span>{{ data.mktval }}</span>
+            <span @click="rightcanva(data)">{{ data.mktval }}</span>
           </template>
           <template #filter="{ filterModel }">
             <Slider v-model="filterModel.value" range class="m-4" :min="1" :max="100000"></Slider>
@@ -198,7 +199,7 @@
         </Column>
         <Column class="cursor-pointer"  v-if="visibleColumns.includes('overall')" sortable field="overall"header="Overall"  :showFilterOperator="false" :showFilterMatchModes="false">
           <template #body="{ data }">
-            <span>{{ data.overall }}</span>
+            <span @click="rightcanva(data)">{{ data.overall }}</span>
           </template>
           <template #filter="{ filterModel }">
             <Slider v-model="filterModel.value" range class="m-4" :min="1" :max="10000"></Slider>
@@ -210,7 +211,7 @@
         </Column>
         <Column class="cursor-pointer"  v-if="visibleColumns.includes('days')"  sortable field="days" header="Days"  :showFilterOperator="false" :showFilterMatchModes="false">
           <template #body="{ data }">
-            <span> {{ data.days }}</span>
+            <span @click="rightcanva(data)"> {{ data.days }}</span>
           </template>
           <template #filter="{ filterModel }">
             <Slider v-model="filterModel.value" range class="m-4" :min="1" :max="1000"></Slider>
@@ -223,6 +224,122 @@
 
       </DataTable>
 
+      
+<Drawer v-model:visible="visibleRight" header="Stock Details" position="right" class="!w-90 md:!w-80 lg:!w-[80rem] wd" >
+
+
+<hr>
+<div class="w-full p-1 flex flex-col h-full justify-between" >
+<div class="w-full flex wrap" >
+  <div class="w-2/3 p-1 b-1"  >
+    <Tabs value="0">
+  <TabList >
+      <Tab value="0"><i class="pi pi-asterisk"></i> Activity</Tab>
+      <Tab value="1"><i class="pi pi-envelope"></i> Emails</Tab>
+      <Tab value="2"><i class="pi pi-comment"></i> Comments</Tab>
+      <Tab value="3"><i class="pi pi-database"></i> Data</Tab>
+      <Tab value="4"><i class="pi pi-list-check"></i> Tasks</Tab>
+      <Tab value="5"><i class="pi pi-clipboard"></i> Notes</Tab>
+      <Tab value="6"><i class="pi pi-paperclip"></i> Attachments</Tab>
+  </TabList>
+  <TabPanels>
+  <TabPanel value="0">
+      Tab-0
+  </TabPanel>
+  <TabPanel value="1">
+    Tab-1
+  </TabPanel>
+  <TabPanel value="2">
+      Tab-2
+  </TabPanel>
+  <TabPanel value="3">
+    Tab-3
+  </TabPanel>
+  <TabPanel value="4">
+      Tab-4
+  </TabPanel>
+  <TabPanel value="5">
+    Tab-5
+  </TabPanel>
+  <TabPanel value="6">
+    Tab-6
+  </TabPanel>
+</TabPanels>
+</Tabs>
+
+
+  </div>
+  <div class="w-1/3 p-1 b-1" style="border-left: 1px solid gray;">
+    <p class="text-black-500 text-xl p-2 mt-3"><b>CRM-123H43</b></p>
+    <hr>
+
+    <div class="w-full flex justify-center items-center gap-3 p-2">
+      <div class="rounded-full bg-slate-500 w-10 h-10"></div>
+      <h1>{{ stockname }}</h1>
+    </div>
+    <hr>
+    <div class="w-full mt-2">
+      
+    <Accordion value="0">
+<AccordionPanel value="0">
+    <AccordionHeader>Details</AccordionHeader>
+    <AccordionContent>
+
+      <div class="w-full  flex">
+        <div class="w-full " ><span>Stock Name</span></div>
+        <div class="w-full " ><span>{{stockname}}</span></div>
+      </div>
+      <div class="w-full  flex">
+        <div class="w-full " ><span>Date</span></div>
+        <div class="w-full " ><span>{{dateval}}</span></div>
+      </div>
+      <div class="w-full  flex">
+        <div class="w-full " ><span>Quantity</span></div>
+        <div class="w-full " ><span>{{quant}}</span></div>
+      </div>
+      <div class="w-full  flex">
+        <div class="w-full " ><span>AVG Price</span></div>
+        <div class="w-full " ><span>{{avg}}</span></div>
+      </div>
+      <div class="w-full  flex">
+        <div class="w-full " ><span>LTP</span></div>
+        <div class="w-full " ><span>{{ltp}}</span></div>
+      </div>
+      <div class="w-full  flex">
+        <div class="w-full " ><span>INV Amount</span></div>
+        <div class="w-full " ><span>{{invamt}}</span></div>
+      </div>
+      <div class="w-full  flex">
+        <div class="w-full " ><span>MKT Value</span></div>
+        <div class="w-full " ><span>{{mktval}}</span></div>
+      </div>
+      <div class="w-full  flex">
+        <div class="w-full " ><span>Over All</span></div>
+        <div class="w-full " ><span>{{overall}}</span></div>
+      </div>
+      <div class="w-full  flex">
+        <div class="w-full " ><span>Days</span></div>
+        <div class="w-full " ><span>{{days}}</span></div>
+      </div>
+     
+       
+    </AccordionContent>
+</AccordionPanel>
+</Accordion>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div class="w-full p-1 flex justify-center gap-2" >
+<Button label="Proceed" severity="success" @click="proceedfun" raised />
+<Button label="Cancel" severity="danger" @click="cancelfun" variant="outlined" />
+</div> 
+</div>
+</Drawer>
+
     </div>
   </div>
 </template>
@@ -232,7 +349,7 @@ import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
 import { ArrowPathIcon, ChartPieIcon, CursorArrowRaysIcon, FingerPrintIcon, SquaresPlusIcon, } from '@heroicons/vue/24/outline'
 import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
-
+import { useToast } from "primevue/usetoast";
 
 const formatDatee = (dateString) => {
   if (!dateString) return "";
@@ -246,11 +363,15 @@ const startdate = ref('0')
 const enddate = ref('0')
 const customers = ref([]);
 const filters = ref();
-const getdata = async (data_filter, panel) => {
-  
+
+const activedata=ref('days_7')
+const getdata = async (data_filter, close) => {
+
+ 
+
   if (data_filter === 'daterangefilter') {
-    flylayout.value=false
-  // Function to format date as dd-mm-yyyy
+    close()
+  
   const formatDate = (date) => {
     const dd = String(date.getDate()).padStart(2, '0');
     const mm = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
@@ -258,10 +379,9 @@ const getdata = async (data_filter, panel) => {
     return `${dd}-${mm}-${yyyy}`;
   };
 
-  // Convert input values to Date objects
   const startDate = new Date(start.value);
   let endDate = new Date(end.value);
-  endDate.setHours(23, 59, 59, 999); // Ensure we include the full last day
+  endDate.setHours(23, 59, 59, 999); 
 
   try {
     const res = await fetch('/peryear.json');
@@ -270,13 +390,12 @@ const getdata = async (data_filter, panel) => {
     const data = await res.json();
 
     if (startDate && endDate) {
-      // Log formatted startDate and endDate
+      
       startdate.value=formatDate(startDate)
       enddate.value= formatDate(endDate)
     
-      // Filter data based on the date range
       const filteredData = data.filter(item => {
-        const itemDate = new Date(item.date); // Assuming JSON has a "date" field
+        const itemDate = new Date(item.date);
         return itemDate >= startDate && itemDate <= endDate;
       });
 
@@ -287,19 +406,14 @@ const getdata = async (data_filter, panel) => {
   }
 }
 
-
-
-
-
  else{
   try {
     const res = await fetch('/filterdata.json');
     if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
     const data = await res.json()
     if (data_filter == 'days_7') {
-      if(panel=='none'){
-        
-      }
+      activedata.value='days_7'
+      close()
       customers.value = data[0].days_7
      
       enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
@@ -314,7 +428,8 @@ const getdata = async (data_filter, panel) => {
        
     }
     else if (data_filter == 'days_15') {
- 
+       activedata.value='days_15'
+      close()
       customers.value = data[0].days_15
      
       enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
@@ -325,7 +440,8 @@ const getdata = async (data_filter, panel) => {
   end.value= enddate.value
     }
     else if (data_filter == 'month_1') {
-  
+       activedata.value='month_1'
+      close()
       customers.value = data[0].month_1
       enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
 
@@ -339,7 +455,8 @@ start.value= startdate.value
 
     }
     else if (data_filter == 'months_3') {
-    
+       activedata.value='months_3'
+    close()
       customers.value = data[0].months_3
       enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
 
@@ -360,7 +477,7 @@ start.value= startdate.value
 };
 
 onMounted(() => {
-  getdata('days_7');
+  getdata('days_7', close);
 });
 
 const initFilters = () => {
@@ -428,6 +545,85 @@ const dt = ref()
 const exportCSV = () => {
   dt.value.exportCSV();
 };
+
+const visibleRight = ref(false);
+const stockname=ref('')
+const dateval=ref('')
+const quant=ref('')
+const avg=ref('')
+const ltp=ref('')
+const invamt=ref('')
+const mktval=ref('')
+const overall=ref('')
+const days=ref('')
+
+const rightcanva =(dataval)=>{
+
+visibleRight.value=true
+stockname.value=dataval.stockname
+dateval.value=dataval.date
+quant.value=dataval.quantity
+avg.value=dataval.avgprice
+ltp.value=dataval.ltp
+invamt.value=dataval.invamt
+mktval.value=dataval.mktval
+overall.value=dataval.overall
+days.value=dataval.days
+}
+
+const proceedfun=async()=>{
+const formdata=new FormData()
+formdata.append('stockname', stockname.value)
+formdata.append('date', dateval.value)
+formdata.append('quantity', quant.value)
+formdata.append('averageprice', avg.value)
+formdata.append('ltp', ltp.value)
+formdata.append('invamt', invamt.value)
+formdata.append('mktval', mktval.value)
+formdata.append('overall', overall.value)
+formdata.append('days', days.value)
+const api='https://fakestoreapi.com/products'
+try {
+const res = await fetch(api,{
+method:'POST',
+body:formdata
+});
+if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+const data = await res.json();
+toast.add({ severity: 'success', summary: 'Success Message', detail: data.id, life: 3000 });
+} catch (error) {
+console.error("Error:", error.message);
+}
+
+
+}
+
+const cancelfun=async()=>{
+
+const formdata=new FormData()
+formdata.append('stockname', stockname.value)
+formdata.append('date', dateval.value)
+formdata.append('quantity', quant.value)
+formdata.append('averageprice', avg.value)
+formdata.append('ltp', ltp.value)
+formdata.append('invamt', invamt.value)
+formdata.append('mktval', mktval.value)
+formdata.append('overall', overall.value)
+formdata.append('days', days.value)
+const api='https://fakestoreapi.com/products'
+try {
+const res = await fetch(api,{
+method:'POST',
+body:formdata
+});
+if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+const data = await res.json();
+toast.add({ severity: 'error', summary: 'Cancel Message', detail: data.id, life: 3000 });
+} catch (error) {
+console.error("Error:", error.message);
+}
+}
+
 </script>
 
 <style>
