@@ -161,7 +161,7 @@
 <script setup>
 import { ref } from 'vue'
 
-import ledger from '~/components/newone.vue'
+import ledger from '~/components/tableview.vue'
 import profile from '~/components/profile.vue'
 import trades from '~/components/trades.vue'
 import profiltloss from '~/components/profitloss.vue'
@@ -242,5 +242,5 @@ onMounted(() => {
  
   }
 });
-console.log(val.value)
+
 </script>

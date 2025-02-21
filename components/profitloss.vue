@@ -949,8 +949,8 @@
   <style>
   
   .p-checkbox-checked.p-variant-filled .p-checkbox-box{
-    background-color: blue !important;
-    border: blue !important;
+    background-color: #4F46E5 !important;
+    border: #4F46E5 !important;
   }
  
   .p-multiselect.p-variant-filled{

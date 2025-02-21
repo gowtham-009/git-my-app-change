@@ -1,7 +1,5 @@
 <template>
-    <Toast />
-
-    <div  class="w-full" v-if="loading">
+       <div  class="w-full" v-if="loading">
     <div class="p-1 space-y-4">
   
     
@@ -148,15 +146,16 @@
 </div>
 </div>
 
-  <div v-if="content">
-    <div class="w-full p-1 flex gap-2 items-end" >
+
+    <div class="w-full p-1" v-if="content">
+        <div class="w-full p-1 flex gap-2 items-end" >
      <div>
-      <div class="text-slate-500">Statement For {{ rangetext }}</div>
+      <div class="text-slate-500">Statement For {{ rangetext }} </div>
       <div class="text-black-500"><span>{{ startdate }}</span> To <span>{{ enddate }}</span></div>
      </div>
       <div>
         <Popover class="relative">
-          <PopoverButton class="inline-flex items-center gap-x-1 text-sm/6 font-semibold text-gray-900 border rounded-lg p-1">
+          <PopoverButton class="inline-flex items-center gap-x-1 text-sm/6 font-semibold outline-none text-slate-500 border rounded-lg p-1 hover:bg-indigo-50">
 
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6">
@@ -169,23 +168,23 @@
           <transition  enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-1" 
             enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150"
             leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">
-            <PopoverPanel v-slot="{ close }" class="absolute left-1/2 z-10 mt-2 flex w-screen max-w-max -translate-x-1/2 px-4">
+            <PopoverPanel v-slot="{ close }"  class="absolute left z-10 mt-2 flex w-screen max-w-max -translate-x-1/2 px-4">
               <div
                 class="w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-white text-sm/6 shadow-lg ring-1 ring-gray-900/5">
                 <div class="p-4">
                   <span class="text-lg"><i class="pi pi-clock"></i> Frequently used time period</span>
                   <div class="w-full p-1 flex gap-2 pl-5">
-                    <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'days_7' }" @click="getdata('days_7', close)" 
-                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">7
+                    <button type="button" @click="filtereddata('days_7', close)" :class="{'bg-indigo-600 text-white': activedata === 'days_7', 'hover:bg-indigo-50 hover:text-black': activedata == 'days_7'}"
+                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-indigo-50 hover:text-black-500">
+                      7 Days</button>
+                    <button type="button"  @click="filtereddata('days_15', close)" :class="{'bg-indigo-600 text-white': activedata === 'days_15', 'hover:bg-indigo-50 hover:text-black': activedata == 'days_15'}"
+                      class="rounded-md   px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-indigo-50 hover:text-black-500">15
                       Days</button>
-                    <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'days_15' }" @click="getdata('days_15', close)"
-                      class="rounded-md   px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">15
-                      Days</button>
-                    <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'month_1' }" @click="getdata('month_1', close)"
-                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">1
+                    <button type="button"  @click="filtereddata('month_1', close)" :class="{'bg-indigo-600 text-white': activedata === 'month_1', 'hover:bg-indigo-50 hover:text-black': activedata == 'month_1'}"
+                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-indigo-50 hover:text-black-500">1
                       Month</button>
-                    <button type="button" :class="{ 'bg-indigo-500 text-white': activedata === 'months_3' }" @click="getdata('months_3', close)"
-                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-200">3
+                    <button type="button"  @click="filtereddata('months_3', close)" :class="{'bg-indigo-600 text-white': activedata === 'months_3', 'hover:bg-indigo-50 hover:text-black': activedata == 'months_3'}"
+                      class="rounded-md  px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-indigo-50 hover:text-black-500">3
                       Months</button>
                   </div>
 
@@ -204,7 +203,12 @@
             </div>
              </div>
             <div class="w-full flex justify-start mt-2">
-              <button @click="getdata('daterangefilter', close)" class="text-white bg-indigo-600 py-1 px-2 rounded-lg">Apply filter</button>
+                <button @click="filtereddata('daterangefilter', close)"
+    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 
+           hover:bg-indigo-50 hover:text-black">
+    Apply filter
+</button>
+
             </div>
                 </div>
 
@@ -215,14 +219,16 @@
       </div>
 
     </div>
-
+    </div>
     <div class="w-full p-1 mt-2" >
+        
+    </div>
 
-      <DataTable v-model:filters="filters" :value="customers" paginator :rows="10" removableSort dataKey="id" 
-        filterDisplay="menu" :loading="loading" :globalFilterFields="['stockname', 'quantity']"
-        tableStyle="min-width: 50rem">
+    <div class="card">
+        <DataTable ref="dt" v-model:filters="filters" :value="datarows" paginator :rows="10" removableSort dataKey="id"
+        filterDisplay="menu" :loading="loading" :globalFilterFields="['stockname', 'quantity']">
         <template #paginatorstart>
-                <span>No.of.Rows:{{ noofrows }}</span>
+                <span>No of Rows {{ noofrows }}</span>
             </template>
         <template #header>
           <div class="flex justify-end gap-2 items-center">
@@ -231,31 +237,34 @@
               <InputIcon>
                 <i class="pi pi-search" />
               </InputIcon>
-              <InputText v-model="filters['global'].value" placeholder="Keyword Search" />
+              <InputText v-model="filters['global'].value" placeholder="Search stock and company..." />
             </IconField>
 
             <MultiSelect v-model="selectedColumns" :options="columns" optionLabel="header"
               @change="updateVisibleColumns" display="template" :showToggleAll="false" :dropdownIcon="null"
-              class="p-0 text-white ml-2" style="width: 40px; height: 34px; ">
-
-              <template #dropdownicon>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="p-0 text-white ml-2 " style="width: 42px; height: 34px; ">
+              <template #dropdownicon >
+               
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                   class="w-6 h-6 text-slate-500">
                   <path fill-rule="evenodd"
                     d="M1.5 5.625c0-1.036.84-1.875 1.875-1.875h17.25c1.035 0 1.875.84 1.875 1.875v12.75c0 1.035-.84 1.875-1.875 1.875H3.375A1.875 1.875 0 0 1 1.5 18.375V5.625ZM21 9.375A.375.375 0 0 0 20.625 9h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5Zm0 3.75a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5a.375.375 0 0 0 .375-.375v-1.5ZM10.875 18.75a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375h7.5ZM3.375 15h7.5a.375.375 0 0 0 .375-.375v-1.5a.375.375 0 0 0-.375-.375h-7.5a.375.375 0 0 0-.375.375v1.5c0 .207.168.375.375.375Zm0-3.75h7.5a.375.375 0 0 0 .375-.375v-1.5A.375.375 0 0 0 10.875 9h-7.5A.375.375 0 0 0 3 9.375v1.5c0 .207.168.375.375.375Z"
                     clip-rule="evenodd" />
                 </svg>
-
+                
               </template>
-
               <template #footer v-if="showReset">
-                <button type="button" @click="resetColumns"
-                  class="rounded-md w-full bg-indigo-600 px-2 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Reset</button>
+              <div class="p-2 w-full flex justify-center">
+                <button type="button"  @click="resetColumns"  class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 
+                hover:bg-indigo-50 hover:text-black">Reset</button>
+              </div>
 
+               
               </template>
             </MultiSelect>
+           
             <button type="button" @click="exportCSV($event)"
-              class="rounded-md ml-2  px-1 py-1 text-sm font-semibold text-slate-500  border-2"><svg
+              class="rounded-md ml-2  px-1 py-1 text-sm font-semibold text-slate-500  border-2 hover:bg-indigo-50"><svg
                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                 <path fill-rule="evenodd"
                   d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-.53 14.03a.75.75 0 0 0 1.06 0l3-3a.75.75 0 1 0-1.06-1.06l-1.72 1.72V8.25a.75.75 0 0 0-1.5 0v5.69l-1.72-1.72a.75.75 0 0 0-1.06 1.06l3 3Z"
@@ -372,9 +381,9 @@
           </template>
         </Column>
 
-      </DataTable>
-
-      
+        </DataTable>
+       
+            
 <Drawer v-model:visible="visibleRight" header="Stock Details" position="right" class="!w-90 md:!w-80 lg:!w-[80rem] wd" >
 
 
@@ -491,191 +500,54 @@
 </Drawer>
 
     </div>
-  </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue';
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/vue'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/vue/20/solid'
-import { ArrowPathIcon, ChartPieIcon, CursorArrowRaysIcon, FingerPrintIcon, SquaresPlusIcon, } from '@heroicons/vue/24/outline'
 import { FilterMatchMode, FilterOperator } from '@primevue/core/api';
-import { useToast } from "primevue/usetoast";
 
-const rangetext=ref('')
 const loading=ref(true)
 const content=ref(false)
+
+const storedData = ref([]); 
+const datarows=ref([])
+const startdate = ref('0')
+const enddate = ref('0')
+const start = ref(null);
+const end = ref(null);
+const activedata=ref('days_7')
+const rangetext=ref('')
+const noofrows=ref(0)
+const filters = ref();
+
 const formatDatee = (dateString) => {
   if (!dateString) return "";
   const [year, month, day] = dateString.split("-");
   return `${day}-${month}-${year.slice(-4)}`; // Convert yy-mm-dd to dd-mm-yy
 };
 
-const noofrows=ref(0)
-const start = ref(null);
-const end = ref(null);
-const startdate = ref('0')
-const enddate = ref('0')
-const customers = ref([]);
-const filters = ref();
-
-const activedata=ref('days_7')
-
-
-
-const getdata = async (data_filter, close) => {
-
-  const formatDate = (date) => {
-  if (!date) return ""; // Avoid errors
-  let d = new Date(date);
-  let day = String(d.getDate()).padStart(2, "0");
-  let month = String(d.getMonth() + 1).padStart(2, "0"); // Months are zero-based
-  let year = d.getFullYear();
-  return `${day}-${month}-${year}`;
+const formatDater = (date) => {
+  return date.toLocaleDateString('en-GB').split('/').join('-'); // Format to dd-mm-yyyy
 };
 
-if (data_filter === "daterangefilter") {
-  rangetext.value=''
-    if (!start.value || !end.value) {
-        console.error("Start or End date is missing!");
-        return;
-    }
-
-    const formattedStart = new Date(start.value);
-    formattedStart.setHours(0, 0, 0, 0); // Ensure start date includes full day
-    const formattedEnd = new Date(end.value);
-    formattedEnd.setHours(23, 59, 59, 999); // Ensure end date includes full day
-
-    
-    if (formattedStart > formattedEnd) {
-        console.error("Start date cannot be after end date!");
-        return;
-    }
-
+const getdata = async () => {
     try {
-        const res = await fetch("/peryear.json");
+        const res = await fetch("/demo.json");
         if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-        
         const data = await res.json();
+        
        
-        startdate.value=formatDate(formattedStart)
-        enddate.value=formatDate(formattedEnd)
-        const filteredData = data.filter(item => {
-            const itemDate = new Date(item.date); 
-            return itemDate >= formattedStart && itemDate <= formattedEnd;
-        });
-
-        noofrows.value=filteredData.length
-
-       
-        customers.value = filteredData;
+        storedData.value = [...data]; 
+        filtereddata('days_7', close)
     } catch (error) {
         console.error("Error:", error.message);
-    } finally {
-        loading.value = false;
-        content.value = true;
     }
-
-    close();
-}
-
-  else {
-    try {
-      const res = await fetch("/filterdata.json");
-      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-      const data = await res.json();
-
-      if (data_filter === "days_7") {
-        activedata.value = "days_7";
-        rangetext.value = "7 Days";
-        close();
-        customers.value = data[0].days_7;
-        noofrows.value=data[0].days_7.length
-        const today = new Date();
-        const formattedDate = formatDate(today);
-        enddate.value = formattedDate;
-        const sevenDaysAgo = new Date();
-        sevenDaysAgo.setDate(today.getDate() - 6);
-        const formattedStartDate = formatDate(sevenDaysAgo);
-        startdate.value = formattedStartDate;
-
-        start.value = sevenDaysAgo; 
-        end.value = today;
-      }
-
-      else if (data_filter === "days_15") {
-        activedata.value = "days_15";
-        rangetext.value = "15 Days";
-        close();
-        customers.value = data[0].days_15;
-        noofrows.value=data[0].days_15.length
-        const today = new Date();
-        const formattedDate = formatDate(today);
-        enddate.value = formattedDate;
-        const sevenDaysAgo = new Date();
-        sevenDaysAgo.setDate(today.getDate() - 14);
-        const formattedStartDate = formatDate(sevenDaysAgo);
-        startdate.value = formattedStartDate;
-
-        start.value = sevenDaysAgo; 
-        end.value = today;
-      }
-
-      else if (data_filter === "month_1") {
-    activedata.value = "month_1";
-    rangetext.value = "1 Month";
-    close();
-    customers.value = data[0].month_1;
-    noofrows.value=data[0].month_1.length
-    const today = new Date();
-    const formattedDate = formatDate(today);
-    enddate.value = formattedDate;
-
-    // Get the same day of the previous month
-    const previousMonthStart = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
-    const formattedStartDate = formatDate(previousMonthStart);
-    startdate.value = formattedStartDate;
-
-    start.value = previousMonthStart;
-    end.value = today;
-}
-
-else if (data_filter === "months_3") {
-    activedata.value = "months_3";
-    rangetext.value = "3 Month";
-    close();
-    customers.value = data[0].months_3;
-    noofrows.value=data[0].months_3.length
-    const today = new Date();
-    const formattedDate = formatDate(today);
-    enddate.value = formattedDate;
-
-    // Get the same day of the previous month
-    const previousMonthStart = new Date(today.getFullYear(), today.getMonth() - 3, today.getDate());
-    const formattedStartDate = formatDate(previousMonthStart);
-    startdate.value = formattedStartDate;
-
-    start.value = previousMonthStart;
-    end.value = today;
-}
-
-
-
-
-
-
-    } catch (error) {
-      console.error("Error:", error.message);
-    } finally {
-      loading.value = false;
-      content.value = true;
+    finally{
+        loading.value=false
+        content.value=true
     }
-  }
 };
-
-onMounted(() => {
-  getdata("days_7", () => {});
-});
-
 
 const initFilters = () => {
   filters.value = {
@@ -706,19 +578,163 @@ const formatDate = (date) => {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 };
 
-initFilters();
+initFilters()
+onMounted(() => {
+    getdata();
+   
+});
+
+
+const filtereddata= async (datefilterval, close)=>{
+    close()
+    if (datefilterval == 'days_7') {
+    rangetext.value='7 Days'
+    activedata.value='days_7'
+    const today = new Date();
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(today.getDate() - 6);
+    today.setHours(0, 0, 0, 0);
+    sevenDaysAgo.setHours(0, 0, 0, 0);
+    startdate.value = formatDater(sevenDaysAgo);
+    enddate.value = formatDater(today);
+
+    start.value = sevenDaysAgo;
+    end.value = today;
+    const filteredData = storedData.value.filter(item => {
+        const itemDate = new Date(item.date);
+        itemDate.setHours(0, 0, 0, 0); 
+        return itemDate >= sevenDaysAgo && itemDate <= today;
+    });
+
+    datarows.value = filteredData; 
+    noofrows.value=filteredData.length
+}
+
+    else if(datefilterval=='days_15'){
+        rangetext.value='15 Days'
+         activedata.value='days_15'
+        const today = new Date();
+        const fiteenDaysAgo = new Date();
+        fiteenDaysAgo.setDate(today.getDate() - 14);
+        today.setHours(0, 0, 0, 0);
+        fiteenDaysAgo.setHours(0, 0, 0, 0);
+        startdate.value = formatDater(fiteenDaysAgo);
+        enddate.value = formatDater(today);
+
+        start.value = fiteenDaysAgo;
+        end.value = today;
+        const filteredData = storedData.value.filter(item => {
+            const itemDate = new Date(item.date);
+            itemDate.setHours(0, 0, 0, 0); 
+            return itemDate >= fiteenDaysAgo && itemDate <= today;
+        });
+
+        datarows.value = filteredData; 
+        noofrows.value=filteredData.length
+      
+    }
+    else if(datefilterval=='month_1'){
+        rangetext.value='1 Month'
+        activedata.value='month_1'
+        const today = new Date();
+        const oneMonthAgo = new Date();
+        oneMonthAgo.setMonth(today.getMonth() - 1);
+        today.setHours(0, 0, 0, 0);
+        oneMonthAgo.setHours(0, 0, 0, 0);
+        startdate.value = formatDater(oneMonthAgo);
+        enddate.value = formatDater(today);
+
+        start.value = oneMonthAgo;
+        end.value = today;
+        const filteredData = storedData.value.filter(item => {
+            const itemDate = new Date(item.date);
+            itemDate.setHours(0, 0, 0, 0); 
+            return itemDate >= oneMonthAgo && itemDate <= today;
+        });
+
+        datarows.value = filteredData;
+        noofrows.value=filteredData.length
+
+
+    }
+
+    else if(datefilterval=='months_3'){
+        rangetext.value='3 Months'
+         activedata.value='months_3'
+        const today = new Date();
+        const threeMonthsAgo = new Date();
+        threeMonthsAgo.setMonth(today.getMonth() - 3); 
+        today.setHours(0, 0, 0, 0);
+        threeMonthsAgo.setHours(0, 0, 0, 0);
+
+        startdate.value = formatDater(threeMonthsAgo);
+        enddate.value = formatDater(today);
+
+        start.value = threeMonthsAgo;
+        end.value = today;
+        const filteredData = storedData.value.filter(item => {
+            const itemDate = new Date(item.date);
+            itemDate.setHours(0, 0, 0, 0);
+            return itemDate >= threeMonthsAgo && itemDate <= today;
+        });
+
+        datarows.value = filteredData; 
+        noofrows.value=filteredData.length
+    }
+    else if(datefilterval=='daterangefilter'){
+        if (!start.value || !end.value) {
+        console.error("Start or End date is missing!");
+        return;
+    }
+
+    const formattedStart = new Date(start.value);
+    formattedStart.setHours(0, 0, 0, 0);
+    const formattedEnd = new Date(end.value);
+    formattedEnd.setHours(23, 59, 59, 999); 
+
+    
+    if (formattedStart > formattedEnd) {
+        console.error("Start date cannot be after end date!");
+        return;
+    }
+
+    try {
+        const res = await fetch("/peryear.json");
+        if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+        
+        const data = await res.json();
+       
+        startdate.value=formatDater(formattedStart)
+        enddate.value=formatDater(formattedEnd)
+        const filteredData = data.filter(item => {
+            const itemDate = new Date(item.date); 
+            return itemDate >= formattedStart && itemDate <= formattedEnd;
+        });
+        datarows.value = filteredData;
+        noofrows.value=filteredData.length
+    } catch (error) {
+        console.error("Error:", error.message);
+    } finally {
+      
+    }
+
+    close();
+   
+}
+
+}
 
 
 const columns = ref([
-  { field: 'stockname', header: 'Stockname' },
-  { field: 'quantity', header: 'Quantity' },
-  { field: 'avgprice', header: 'Avgprice' },
-  { field: 'ltp', header: 'Ltp' },
-  { field: 'invamt', header: 'Invamt' },
-  { field: 'mktval', header: 'Mktval' },
-  { field: 'overall', header: 'Overall' },
-  { field: 'days', header: 'Days' },
-  { field: 'date', header: 'Date' },
+  { field: 'stockname', header: 'STOCK NAME' },
+  { field: 'quantity', header: 'QUANTITY' },
+  { field: 'avgprice', header: 'AVG PRICE' },
+  { field: 'ltp', header: 'LTP' },
+  { field: 'invamt', header: 'INV' },
+  { field: 'mktval', header: 'MKT' },
+  { field: 'overall', header: 'OVERALL' },
+  { field: 'days', header: 'DAYS' },
+  { field: 'date', header: 'DATE' },
 
 ]);
 //Initially select all columns except 'ltp', 'mktval', and 'date'
@@ -742,6 +758,7 @@ const dt = ref()
 const exportCSV = () => {
   dt.value.exportCSV();
 };
+
 
 const visibleRight = ref(false);
 const stockname=ref('')
@@ -820,11 +837,10 @@ toast.add({ severity: 'error', summary: 'Cancel Message', detail: data.id, life:
 console.error("Error:", error.message);
 }
 }
-
 </script>
 
 <style>
-.left-1\/2 {
-  left: 500% !important;
-}
+ .left{
+  left:663% !important;
+ }
 </style>
