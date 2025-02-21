@@ -218,10 +218,12 @@
 
     <div class="w-full p-1 mt-2" >
 
-      <DataTable v-model:filters="filters" :value="customers" paginator :rows="10" removableSort dataKey="id"
+      <DataTable v-model:filters="filters" :value="customers" paginator :rows="10" removableSort dataKey="id" 
         filterDisplay="menu" :loading="loading" :globalFilterFields="['stockname', 'quantity']"
         tableStyle="min-width: 50rem">
-
+        <template #paginatorstart>
+                <span>No.of.Rows:{{ noofrows }}</span>
+            </template>
         <template #header>
           <div class="flex justify-end gap-2 items-center">
 
@@ -508,157 +510,172 @@ const formatDatee = (dateString) => {
   return `${day}-${month}-${year.slice(-4)}`; // Convert yy-mm-dd to dd-mm-yy
 };
 
-const start=ref('')
-const end=ref('')
+const noofrows=ref(0)
+const start = ref(null);
+const end = ref(null);
 const startdate = ref('0')
 const enddate = ref('0')
 const customers = ref([]);
 const filters = ref();
 
 const activedata=ref('days_7')
+
+
+
 const getdata = async (data_filter, close) => {
 
-  if (data_filter === 'daterangefilter') {
-  console.log(start.value, end.value); // Debugging
+  const formatDate = (date) => {
+  if (!date) return ""; // Avoid errors
+  let d = new Date(date);
+  let day = String(d.getDate()).padStart(2, "0");
+  let month = String(d.getMonth() + 1).padStart(2, "0"); // Months are zero-based
+  let year = d.getFullYear();
+  return `${day}-${month}-${year}`;
+};
 
-  if (!start.value || !end.value) {
-    console.error("Start date or end date is undefined");
-    return; // Stop execution if values are missing
-  }
-
-  rangetext.value = '';
-  close();
-
-  const formatDate = (dateString) => {
-    if (!dateString) return ''; // Handle empty strings safely
-    const date = new Date(dateString);
-    if (isNaN(date)) {
-      console.error(`Invalid date: ${dateString}`);
-      return '';
+if (data_filter === "daterangefilter") {
+  rangetext.value=''
+    if (!start.value || !end.value) {
+        console.error("Start or End date is missing!");
+        return;
     }
-    const dd = String(date.getDate()).padStart(2, '0');
-    const mm = String(date.getMonth() + 1).padStart(2, '0'); // Months are zero-based
-    const yyyy = date.getFullYear();
-    return `${dd}-${mm}-${yyyy}`;
-  };
 
-  const startDate = new Date(start.value);
-  let endDate = new Date(end.value);
+    const formattedStart = new Date(start.value);
+    formattedStart.setHours(0, 0, 0, 0); // Ensure start date includes full day
+    const formattedEnd = new Date(end.value);
+    formattedEnd.setHours(23, 59, 59, 999); // Ensure end date includes full day
 
-  if (isNaN(startDate) || isNaN(endDate)) {
-    console.error("Invalid date format");
-    return;
-  }
-
-  endDate.setHours(23, 59, 59, 999);
-
-  try {
-    const res = await fetch('/peryear.json');
-    if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-
-    const data = await res.json();
-
-    if (startDate && endDate) {
-      console.log(startDate, endDate);
-
-      startdate.value = formatDate(start.value);
-      enddate.value = formatDate(end.value);
-
-      const filteredData = data.filter(item => {
-        const itemDate = new Date(item.date);
-        return itemDate >= startDate && itemDate <= endDate;
-      });
-
-      customers.value = filteredData;
+    
+    if (formattedStart > formattedEnd) {
+        console.error("Start date cannot be after end date!");
+        return;
     }
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  } finally {
-    loading.value = false;
-    content.value = true;
-  }
+
+    try {
+        const res = await fetch("/peryear.json");
+        if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+        
+        const data = await res.json();
+       
+        startdate.value=formatDate(formattedStart)
+        enddate.value=formatDate(formattedEnd)
+        const filteredData = data.filter(item => {
+            const itemDate = new Date(item.date); 
+            return itemDate >= formattedStart && itemDate <= formattedEnd;
+        });
+
+        noofrows.value=filteredData.length
+
+       
+        customers.value = filteredData;
+    } catch (error) {
+        console.error("Error:", error.message);
+    } finally {
+        loading.value = false;
+        content.value = true;
+    }
+
+    close();
+}
+
+  else {
+    try {
+      const res = await fetch("/filterdata.json");
+      if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+      const data = await res.json();
+
+      if (data_filter === "days_7") {
+        activedata.value = "days_7";
+        rangetext.value = "7 Days";
+        close();
+        customers.value = data[0].days_7;
+        noofrows.value=data[0].days_7.length
+        const today = new Date();
+        const formattedDate = formatDate(today);
+        enddate.value = formattedDate;
+        const sevenDaysAgo = new Date();
+        sevenDaysAgo.setDate(today.getDate() - 6);
+        const formattedStartDate = formatDate(sevenDaysAgo);
+        startdate.value = formattedStartDate;
+
+        start.value = sevenDaysAgo; 
+        end.value = today;
+      }
+
+      else if (data_filter === "days_15") {
+        activedata.value = "days_15";
+        rangetext.value = "15 Days";
+        close();
+        customers.value = data[0].days_15;
+        noofrows.value=data[0].days_15.length
+        const today = new Date();
+        const formattedDate = formatDate(today);
+        enddate.value = formattedDate;
+        const sevenDaysAgo = new Date();
+        sevenDaysAgo.setDate(today.getDate() - 14);
+        const formattedStartDate = formatDate(sevenDaysAgo);
+        startdate.value = formattedStartDate;
+
+        start.value = sevenDaysAgo; 
+        end.value = today;
+      }
+
+      else if (data_filter === "month_1") {
+    activedata.value = "month_1";
+    rangetext.value = "1 Month";
+    close();
+    customers.value = data[0].month_1;
+    noofrows.value=data[0].month_1.length
+    const today = new Date();
+    const formattedDate = formatDate(today);
+    enddate.value = formattedDate;
+
+    // Get the same day of the previous month
+    const previousMonthStart = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+    const formattedStartDate = formatDate(previousMonthStart);
+    startdate.value = formattedStartDate;
+
+    start.value = previousMonthStart;
+    end.value = today;
+}
+
+else if (data_filter === "months_3") {
+    activedata.value = "months_3";
+    rangetext.value = "3 Month";
+    close();
+    customers.value = data[0].months_3;
+    noofrows.value=data[0].months_3.length
+    const today = new Date();
+    const formattedDate = formatDate(today);
+    enddate.value = formattedDate;
+
+    // Get the same day of the previous month
+    const previousMonthStart = new Date(today.getFullYear(), today.getMonth() - 3, today.getDate());
+    const formattedStartDate = formatDate(previousMonthStart);
+    startdate.value = formattedStartDate;
+
+    start.value = previousMonthStart;
+    end.value = today;
 }
 
 
- else{
-  try {
-    const res = await fetch('/filterdata.json');
-    if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-    const data = await res.json()
-    if (data_filter == 'days_7') {
-      activedata.value='days_7'
-      rangetext.value='7 Days'
-      close()
-      customers.value = data[0].days_7
-     
-      enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
-      startdate.value = new Date(new Date().setDate(new Date().getDate() - 6))
 
-     
-  .toLocaleDateString('en-GB')
-  .replace(/\//g, '-');
 
-  start.value= startdate.value
-  end.value= enddate.value
-       
+
+
+    } catch (error) {
+      console.error("Error:", error.message);
+    } finally {
+      loading.value = false;
+      content.value = true;
     }
-    else if (data_filter == 'days_15') {
-       activedata.value='days_15'
-       rangetext.value='15 Days'
-      close()
-      customers.value = data[0].days_15
-     
-      enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
-      startdate.value = new Date(new Date().setDate(new Date().getDate() - 14)).toLocaleDateString('en-GB').replace(/\//g, '-');
-      start.value= startdate.value
-      end.value= enddate.value
-    }
-    else if (data_filter == 'month_1') {
-       activedata.value='month_1'
-       rangetext.value='1 Month'
-      close()
-      customers.value = data[0].month_1
-      enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
-
-let prevMonthDate = new Date();
-prevMonthDate.setMonth(prevMonthDate.getMonth() - 1);
-
-startdate.value = prevMonthDate.toLocaleDateString('en-GB').replace(/\//g, '-');
-
-start.value= startdate.value
-  end.value= enddate.value
-
-    }
-    else if (data_filter == 'months_3') {
-       activedata.value='months_3'
-       rangetext.value='3 Month'
-    close()
-      customers.value = data[0].months_3
-      enddate.value = new Date().toLocaleDateString('en-GB').replace(/\//g, '-');
-
-let prevThreeMonthsDate = new Date();
-prevThreeMonthsDate.setMonth(prevThreeMonthsDate.getMonth() - 3);
-
-startdate.value = prevThreeMonthsDate.toLocaleDateString('en-GB').replace(/\//g, '-');
-start.value= startdate.value
-  end.value= enddate.value
-
-    }
-
-
-  } catch (error) {
-    console.error('Error:', error.message);
   }
-  finally{
-    loading.value=false
-    content.value=true
-  }
- }
 };
 
 onMounted(() => {
-  getdata('days_7', close);
+  getdata("days_7", () => {});
 });
+
 
 const initFilters = () => {
   filters.value = {
